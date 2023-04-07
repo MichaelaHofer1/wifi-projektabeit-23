@@ -1,10 +1,11 @@
 :root {
-    --base-color: #000;
-    --base-font-size: 15px;
+    --base-color: #000000;
+    --secondary-color: #fff;
+    --contrast-color: #fff71a;
+    --base-font-size: 16px;
     --base-line-height: 1.4;
     --navbar-height-mobile: 65px;
     --navbar-height-desktop: 100px; 
-    --contrast-color: #fff71a;
 }
 
 /* montserrat-100 - latin */
@@ -127,6 +128,266 @@ a:active {
 li,
 ul {
     list-style: none;
-    padding:0;
-    
+    padding:0;    
 }
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+
+.container {
+    padding: 0 5%;
+}
+
+
+
+
+
+/* LAYOUT NAV-BAR */
+#nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--base-color);
+    color: white;
+    z-index: 1000;
+}
+
+#nav-bar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--navbar-height-mobile);
+}
+
+@media screen and (min-width:600px) {
+    #nav-bar .container{
+        height: var(--navbar-height-desktop);
+    }
+}
+
+#brand {
+    height: calc(var(--navbar-height-mobile) / 1.5);
+}
+
+#brand img {
+    height: 100%;
+}
+
+
+/* nav-toggle  */
+
+#nav-toggle {
+    display: none;
+}
+
+#nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(var(--navbar-height-mobile) / 1.5);
+    width: calc(var(--navbar-height-mobile) / 1.5);
+    cursor: pointer;
+}
+
+#nav-button-icon,
+#nav-button-icon::before,
+#nav-button-icon::after {
+    width: 40px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+#nav-button-icon {
+    display: block;
+    position: relative;
+    transition: background-color 200ms linear;
+}
+
+#nav-button-icon::before,
+#nav-button-icon::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: transform 200ms linear;
+}
+
+#nav-button-icon::before {
+    transform: translateY(13px);
+}
+
+#nav-button-icon::after {
+    transform: translateY(-13px);
+}
+
+#nav-toggle:checked ~ #nav-button #nav-button-icon {
+    background-color: transparent;
+}
+
+#nav-toggle:checked ~ #nav-button #nav-button-icon:before {
+    transform: rotate(45deg);
+}
+
+#nav-toggle:checked ~ #nav-button #nav-button-icon:after {
+    transform: rotate(-45deg);
+}
+
+
+#nav-toggle:checked ~ #nav-main {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* main-menu und sub-menu */
+.nav-menu,
+.sub-menu {
+    margin: 0;
+}
+
+#nav-main{
+    position: fixed;
+    top: calc(var(--navbar-height-mobile) - 1px);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(35, 35, 35) 100%);
+    text-align: center;
+    padding-right: 5%;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease-in;    
+}
+
+#nav-main a {
+    color: var(--secondary-color);
+    line-height: 2.3em;
+}
+
+#nav-main a:hover {
+    color: var(--contrast-color);
+}
+
+#nav-main .current-menu-item a {
+    color: var(--contrast-color);
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 600px) {
+    #nav-button {
+        display: none;
+    }
+
+    #nav-main {
+        position: static;
+        display: flex;
+        padding: 0;
+        overflow: visible;
+        opacity: 1;
+        pointer-events: auto;
+        background: transparent;
+    }
+
+    #nav-main a {
+        padding: calc(var(--navbar-height-desktop) / 2.4) 2em;
+    }
+
+    #nav-main li {
+        position: relative;
+        line-height: var(--navbar-height-desktop);
+    }
+
+    .sub-menu {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -20px);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(35, 35, 35) 100%);
+        line-height: 1em;
+        padding: .5em 0 1em;
+        opacity: 0;
+        transition: transform 350ms linear, opacity 150ms linear;
+        border-radius: 0 0 5px 5px ;
+    }
+
+    #nav-main .sub-menu li {
+        line-height: 3em;
+    }
+    #nav-main .sub-menu a {
+        padding: 2em 1.75em;
+    }
+
+    #nav-main li:hover > .sub-menu {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, 0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ******************
+ * Text meant only for screen readers
+ */
+ .screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+  }
+
+  .screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+  }
+
