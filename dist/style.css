@@ -296,8 +296,23 @@ img {
 
 #nav-main .current-menu-item a {
     color: var(--contrast-color);
-    text-decoration: underline;
 }
+#nav-main .current-menu-item {
+    position: relative;
+}
+
+#nav-main .current-menu-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 30px;
+    width: 2px;
+    background-color: var(--contrast-color);
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+}
+
 
 #nav-main .sub-menu a {
     font-size: 1.2em;
@@ -324,7 +339,8 @@ img {
     }
 
     #nav-main a {
-        padding: calc(var(--navbar-height-desktop) / 2.4) 2em;
+        padding: calc((100px - 29px) /2) 0;
+        margin: 0em 2em;
     }
 
     #nav-main li {
@@ -454,6 +470,8 @@ img {
    object-fit: cover;
    height: calc((100vh - var(--navbar-height-mobile)) / 2);
    width: 100%;
+   filter: grayscale(100%);
+   transform: scale(2);
 }
 
 
