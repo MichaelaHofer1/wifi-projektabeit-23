@@ -352,7 +352,6 @@ img {
     }
 
     #nav-main .sub-menu a {
-        display: block;
         padding: .5em 1em;
     }
 
@@ -363,14 +362,15 @@ img {
 
     .sub-menu {
         position: absolute;
+        display: none;
+        opacity: 0;
         top: 100%;
         left: 50%;
         transform: translate(-50%, -20px);
         background: linear-gradient(0deg, var(--base-color) 0%, rgb(165, 165, 165) 100%);
         line-height: 1em;
         padding: .5em 0 1em;
-        opacity: 0;
-        transition: transform 350ms linear, opacity 150ms linear;
+        transition: transform 350ms linear, opacity 250ms linear;
         border-radius: 0 0 5px 5px ;
     }
 
@@ -380,6 +380,7 @@ img {
     }
 
     #nav-main li:hover > .sub-menu {
+        display: block;
         opacity: 1;
         pointer-events: auto;
         transform: translate(-50%, 0);
