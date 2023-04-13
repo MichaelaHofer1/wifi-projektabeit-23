@@ -1,7 +1,8 @@
 :root {
-    --base-color: #000000;
-    --secondary-color: #fff;
-    --contrast-color: #fff71a;
+    --base-color: #d2d2d2;
+    --secondary-color: #000000;
+    --third-color: #ffffff;
+    --contrast-color: #ffffff;
     --base-font-size: 16px;
     --base-line-height: 1.4;
     --navbar-height-mobile: 65px;
@@ -110,7 +111,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: 300;
 }
 
@@ -167,7 +168,7 @@ img {
     left: 0;
     right: 0;
     background-color: var(--base-color);
-    color: white;
+    color: var(--secondary-color);
     z-index: 1000;
 }
 
@@ -190,6 +191,7 @@ img {
 
 #brand img {
     height: 100%;
+    filter: grayscale(100%);
 }
 
 
@@ -271,7 +273,7 @@ img {
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(35, 35, 35) 100%);
+    background: linear-gradient(0deg, rgb(209, 209, 209) 0%, rgb(148, 148, 148) 100%);
     text-align: center;
     padding: 0 5%;
     overflow-y: auto;
@@ -319,6 +321,14 @@ img {
     line-height: 1.9em;
 }
 
+#nav-main li {
+    letter-spacing: 10px;
+}
+
+#nav-main .sub-menu li {
+    letter-spacing: 3px;
+}
+
 .sub-menu {
     padding: 0 0 1em;
 }
@@ -346,6 +356,7 @@ img {
     #nav-main li {
         position: relative;
         line-height: var(--navbar-height-desktop);
+        letter-spacing: 3px;
     }
 
     .sub-menu {
@@ -353,7 +364,7 @@ img {
         top: 100%;
         left: 50%;
         transform: translate(-50%, -20px);
-        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(35, 35, 35) 100%);
+        background: linear-gradient(0deg, var(--base-color) 0%, rgb(165, 165, 165) 100%);
         line-height: 1em;
         padding: .5em 0 1em;
         opacity: 0;
@@ -400,7 +411,7 @@ img {
 
 
 .header-text {
-    background-color: var(--secondary-color);
+    background-color: var(--third-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -471,7 +482,6 @@ img {
    height: calc((100vh - var(--navbar-height-mobile)) / 2);
    width: 100%;
    filter: grayscale(100%);
-   transform: scale(2);
 }
 
 
@@ -490,7 +500,7 @@ img {
         height: 0px;
         border-style: solid;
         border-width: calc(100vh - var(--navbar-height-desktop)) 300px 0 0;
-        border-color:var(--secondary-color) transparent transparent transparent;
+        border-color:var(--third-color) transparent transparent transparent;
         z-index: 99;
     }
 
@@ -517,38 +527,22 @@ img {
 
 
 .is-style-headline {
-    margin: 3.5em 0 1.5em;
+    margin: 3.5em auto 1.5em;
     padding: 0;
     position: relative;
-    background-color: var(--secondary-color);
-    display: inline-block;
     letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+
 }
 
 @media  screen and (min-width: 1200px) {
     .is-style-headline {
-        margin: 250px 0 2em 5%;
+        margin: 250px 0 2em;
+        text-align: left;
     }   
 }
 
-
-.is-style-headline::before,
-.is-style-headline::after {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 30px;
-    position: absolute;
-    top: 50%;
-    background-color: #000000;
-}
-.is-style-headline::before {
-    left: -35%;
-}
-
-.is-style-headline::after {
-    right: -35%;
-}
 
 
 .columns {
@@ -581,27 +575,28 @@ img {
 .column img {
     object-fit: cover;
     width: 400px;
-    height: 400px;
+    min-height: 400px;
 }
 
 
 
 .column.btn-see-more {
     min-height: 150px;
+    margin-bottom: 5em;
 }
 
 .btn-see-more {
     height: 150px;
     width: 150px;
     border: 1px solid black;
-    transform: translate(50%, 50%);
+    transform: translate(50%, 20%);
     border-radius: calc(150px / 2);
     position: relative;
     transition: background-color 150ms linear;
 }
 
 .btn-see-more:hover {
-    background-color: #f5f5f576;
+    background-color: #ededed;
 }
 
 
@@ -641,12 +636,58 @@ img {
 
 
 
+/********************* */
+/* ÜBER MICH */
+
+.about-me .column {
+    max-height: 600px;
+}
+
+
+.about-me .btn-see-more {
+
+}
 
 
 
+@media  screen and (min-width: 1200px) {
+    .about-me .columns {
+        grid-template-columns: 2fr 1.6fr;
+        padding: 250px 16% 0 20%;
+        width: 100%;
+    }   
+    
+    .about-me .column:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
 
 
+    .profile-pic  {
+        grid-area: 1 / 2 / span 2;
+    }
 
+   .profile-pic img {
+        max-height: 600px;
+    }
+
+    .about-me .is-style-headline {
+        margin: 0;
+        text-align: center;
+    }
+
+    .btn-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-me .btn-see-more {
+        transform: scale(.5) translateY(-50%) ;
+        margin: 0;
+    }
+
+}
 
 
 
