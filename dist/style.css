@@ -698,6 +698,11 @@ img {
         transform: scale(.5) translateY(-50%) ;
         margin: 0;
     }
+    
+    .about-me .btn-see-more::before,
+    .about-me .btn-see-more::after {
+        height: 2px;
+    }
 
 }
 
