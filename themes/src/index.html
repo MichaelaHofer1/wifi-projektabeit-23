@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michaela Hofer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/icons/style.css">
+</head>
+<body>
+    <a href="#content" class="screen-reader-text">Zum Inhalt springen</a>
+    <nav id="nav-bar">
+        <div class="container">
+            <div id="brand">
+                <a href="index.html">
+                    <img src="/dist/assets/img/cat3.jpg" alt="#">
+                </a>
+            </div>
+            <input type="checkbox" id="nav-toggle">
+            <label for="nav-toggle" id="nav-button">
+                <span id="nav-button-icon" aria-hidden="true"></span>
+                <span class="screen-reader-text">Navigation öffnen/schließen</span>
+            </label>
+            <ul id="nav-main" class="nav-menu">
+                <li class="current-menu-item">
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Galerie</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="sculptures.html">Skulpturen</a>
+                        </li>
+                        <li>
+                            <a href="silhouettes.html">Scherenschnitte</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="about-me.html">Über mich</a>
+                </li>
+                <li>
+                    <a href="contact.html">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header class="header-content">
+        <div class="header-text">
+            <h1>Michaela
+                <br>
+                <span class="last-name">Hofer</span><span class="profession part1">bildende </span><span class="profession part2">Künstlerin</span>
+            </h1>
+        </div>
+        <div id="header-slideshow-img-container">
+            <img src="./assets/img/detail_canvas_triangles.jpg" alt="detail artwork">
+        </div>
+    </header>
+        
+    <main id="content" class="container">
+        <section class="sculptures">
+            <h2 class="is-style-headline">Skulpturen</h2>
+            <div class="columns">
+                <div class="column">
+                    <img src="/dist/assets/img/cat3.jpg" alt="bild1">
+                </div>
+                <div class="column">
+                    <img src="/dist/assets/img/cat1.jpg" alt="bild1">
+                </div>
+                <div class="column">
+                    <img src="/dist/assets/img/cat4.jpg" alt="bild1">
+                </div>
+                <div class="column">
+                    <img src="/dist/assets/img/cat1.jpg" alt="bild1">
+                </div>
+            </div>
+            <div class="btn-container column">
+                <a href="#" class="btn-see-more"></a> 
+            </div> 
+        </section>
+        <section class="silhouettes">
+            <h2 class="is-style-headline">Scherenschnitte</h2>
+            <div class="columns">
+                <div class="column">
+                    <img src="/dist/assets/img/cat3.jpg" alt="bild1">
+                </div>
+                <div class="column">
+                    <img src="/dist/assets/img/cat1.jpg" alt="bild1">
+                </div>
+                <div class="column">
+                    <img src="/dist/assets/img/cat4.jpg" alt="bild1">
+                </div>
+                <div class="column">
+                    <img src="/dist/assets/img/cat3.jpg" alt="bild1">
+                </div>
+            </div>
+            <div class="btn-container column">
+                <a href="#" class="btn-see-more"></a> 
+            </div> 
+        </section>
+        
+        <section class="about-me">
+            <div class="columns">
+                <div class="column">
+                    <h2 class="is-style-headline">Über mich</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                    </p>      
+                </div>
+                <div class="column profile-pic">
+                    <img src="/dist/assets/img/_vorläufig_profile-pic.jpg" alt="bild1">
+                </div>
+            </div>
+                <div class="btn-container column">
+                    <a href="#" class="btn-see-more"></a> 
+                </div> 
+        </section>
+
+
+        <section class="contact">
+            <h2 class="is-style-headline">Kontakt</h2>
+            <div class="column">
+                <form action="#" method="get">
+                    <div>
+                        <label for="name"></label>
+                        <input type="text" id="name" placeholder="Ihr Name...">
+                    </div>
+                    <div>
+                        <label for="mail"></label>
+                        <input type="text" id="mail" placeholder="Ihre Email...">
+                    </div>
+                    <div>
+                        <label for="message"></label>
+                        <textarea id="message" placeholder="Ihre Nachricht..." rows="8"></textarea>
+                    </div>
+                </form>
+                <button>Absenden</button>
+                
+            </div>
+        </section>
+    </main>
+    <footer id="footer-page" class="container">
+        <div class="nav-footer">
+            <ul class="nav-menu">
+                <li><a href="#">Datenschutz</a></li>
+                <li><a href="#">Impressum</a></li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank">
+                <span class="icon-facebook2" aria-hidden="true"></span>
+                <span class="screen-reader-text">Follow on Facebook</span>
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <span class="icon-instagram" aria-hidden="true"></span>
+                <span class="screen-reader-text">Follow on Instagram</span>
+            </a>
+        </div>
+        <div class="copyright">
+            &copy; Michaela Hofer 2023
+        </div>
+    </footer>
+
+
+
+    
+</body>
+</html>
