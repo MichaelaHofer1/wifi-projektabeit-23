@@ -4,9 +4,10 @@
     <nav id="nav-footer">
         <?php 
             wp_nav_menu(array(
-                'theme_location' => 'secondary',
+                'theme_location' => 'footer',
                 'container' => false,
-                'menu_class' => 'nav-menu',
+                'menu_class' => 'footer-nav-menu',
+                'menu-id' => 'footer-menu',
                 'fallback_cb' => false,
                 'depth' => 1
             ));

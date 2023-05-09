@@ -1,14 +1,3 @@
-/*!
-Theme Name: Michaela Hofer - Projektarbeit Wifi 2023
-Author: Michaela Hofer
-Description: Mein eigenes Theme
-Version: 1.0.0
-Text Domain: wifi
-*/
-
-
-
-
 :root {
     --base-color: #d2d2d2;
     --secondary-color: #000000;
@@ -198,12 +187,11 @@ img {
 }
 
 #brand {
-    /* height: calc(var(--navbar-height-mobile) / 1.5);*/
+    height: calc(var(--navbar-height-mobile) / 1.5);
 }
 
 #brand img {
-    height: 70px;
-    width: 70px;
+    height: 100%;
     filter: grayscale(100%);
 }
 
@@ -528,8 +516,9 @@ img {
 
 /****************** */
 /* SETION SCULPTURES / SILHOUETTES*/
+
 .is-style-headline {
-    margin: .5em auto 1.5em;
+    margin: 60px auto 1.5em;
     padding: 0;
     position: relative;
     letter-spacing: 3px;
@@ -537,15 +526,26 @@ img {
     text-align: center;
 }
 
-@media  screen and (min-width: 1200px) {
+@media  screen and (min-width: 900px) {
     .is-style-headline {
-        margin: 180px 0 2em;
-    }   
-
-    .silhouettes .is-style-headline {
-        margin-top: 50px;
+        margin-top: 0;
     }
 }
+
+@media  screen and (min-width: 1200px) {
+    .is-style-headline {
+        margin: 20px 0 2em;
+    }   
+    /*
+    .silhouettes .is-style-headline {
+        margin-top: 50px;
+    }*/
+}
+
+.top-headline{
+    margin-top: 150px;
+}
+
 
 .is-style-headline::after {
     content: "";
@@ -566,7 +566,13 @@ img {
     }
 }
 
-
+/*
+.column img {
+    object-fit: cover;
+    width: 400px;
+    min-height: 400px;
+}
+*/
 
 .columns {
     display: flex;
@@ -577,42 +583,120 @@ img {
     margin: 0 auto;
 }
 
-@media  screen and (min-width: 1200px) {
-    .columns {
-        width: 100%;
-        flex-direction: row;
-    }   
-}
-
-
 .column {
-    min-height: 300px;
     max-height: 300px;
     overflow: hidden;
 }
 
-@media  screen and (min-width: 1200px) {
+@media  screen and (min-width: 900px) {
     .column {
-        max-height: 400px;
-    }   
+        max-height: 100%;
+    }
 }
 
-.column img {
-    object-fit: cover;
-    width: 400px;
-    min-height: 400px;
+@media  screen and (min-width: 900px) {
+    section {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
 }
+
+@media  screen and (min-width: 1400px) {
+    section {
+        max-width: 2000px;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+/*
+@media  screen and (min-width: 900px) {
+    .columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        height: auto;
+        gap: 30px; 
+        justify-items: center;
+        justify-content: center;
+    }   
+
+       .column.left {
+        justify-self: end;
+    }
+
+    .column.right {
+        justify-self: start;
+    }
+}
+*/
+
+
+
+
+@media  screen and (min-width: 900px) {
+    .columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        height: auto;
+        gap: 30px; 
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    .column {
+        position: relative;
+        width: 100%;
+
+    }
+
+    .column::after{
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+
+    .column img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;  
+    }
+
+}
+
+
+@media  screen and (min-width: 1400px) {
+    .columns {
+        grid-template-columns: repeat(	4, 1fr);
+    }  
+
+}
+
+
+
+
+
 
 .column.btn-container {
     display: flex;
     justify-content: center;
     align-items: center;
     transform: translateY(-50px);
+    max-height: 350px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 900px) {
     .column.btn-container {
-    transform: translateY(0);
+    transform: translateY(-100px);
     }
 }
 
@@ -631,12 +715,17 @@ img {
 }
 
 
+
+
+
 @media  screen and (min-width: 1200px) {
-    .btn-see-more {
+
+    .btn-see-more{
         height: 150px;
         width: 150px;
         border-radius: calc(150px / 2);
     }
+
     
 }
 
@@ -665,13 +754,65 @@ img {
 
 
 
+
+
 /********************* */
 /* ÜBER MICH */
 
-.about-me .column {
-    max-height: 600px;
+.column-about-me {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20%;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 0 10%;
 }
 
+@media  screen and (min-width: 900px) {
+    .column-about-me {
+        flex-direction: row;
+    }
+}
+
+.about-me-image {
+    display: flex;
+    justify-content: center;
+}
+@media  screen and (min-width: 900px) {
+    .about-me-image {
+        order: 1;
+    }
+}
+
+@media  screen and (min-width: 1200px) {
+    .about-me-image {
+        height: 100%;
+    }
+}
+
+.about-me-image img{
+    max-width: 300px;
+}
+
+.btn-container-about-me {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    max-width: 400px;
+}
+
+
+@media  screen and (min-width: 1200px) {
+    .btn-container-about-me p {
+        padding-top: 50px;
+    }
+}
+
+.btn-container-about-me.column::after {
+    display: none;
+}
 
 
 @media  screen and (min-width: 1200px) {
@@ -683,17 +824,15 @@ img {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        max-width: 50%;
+        max-width: 40%;
     }
 
-   .profile-pic img {
-        max-height: 600px;
-    }
+   /*
    .about-me .is-style-headline {
         margin: 0;
         padding-bottom: 1em;
         text-align: center;
-    }
+    }*/
 
     .about-me {
         position: relative;
@@ -718,9 +857,33 @@ img {
 
 }
 
+.column.btn-container {
+    padding: 130px 0 0px;
+}
+
+
+
+
+
+
+
+
+
 /********************** 
 CONTACT
 */
+
+.contact {
+    margin-top: 100px;
+}
+
+
+@media screen and (min-width:900px) {
+    .contact  {
+        margin-top: 150px;
+    }
+}
+
 .contact .column {
     display: flex;
     justify-content: center;
@@ -728,6 +891,7 @@ CONTACT
     flex-direction: column;
     max-height: 100%;
 }
+
 
 
 .contact form {
@@ -773,9 +937,13 @@ CONTACT
     cursor: pointer;
 }
 
-@media screen and (min-width: 1200px) {
-    .contact .is-style-headline {
+@media screen and (min-width: 900px) {
+    /*.contact .is-style-headline {
         text-align: center;
+    }*/
+
+    .contact .column::after {
+        padding-bottom: 0;
     }
 }
 

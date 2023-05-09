@@ -23,7 +23,7 @@
 
         register_nav_menus(array(
             'primary' => __('Hauptmenü', 'wifi'),
-            'secondary' => __('Untermenü', 'wifi')
+            'footer' => __('Footermenü', 'wifi')
         ));
 
     });
