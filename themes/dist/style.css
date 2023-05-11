@@ -188,7 +188,16 @@ img {
 
 #brand {
     height: calc(var(--navbar-height-mobile) / 1.5);
+    width: calc(var(--navbar-height-mobile) / 1.5);
 }
+
+@media screen and (min-width:1200px) {
+    #brand {
+        height: calc(var(--navbar-height-mobile) / 1.1);
+        width: calc(var(--navbar-height-mobile) / 1.1);
+    }
+}
+
 
 #brand img {
     height: 100%;
@@ -319,10 +328,20 @@ img {
     width: 2px;
     background-color: var(--contrast-color);
     top: 50%;
-    left: 20%;
     transform: translateY(-50%);
 }
 
+#nav-main .current-menu-item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 30px;
+    width: 2px;
+    background-color: var(--contrast-color);
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
 
 .sub-menu {
     padding: 0 0 1em;
@@ -1025,7 +1044,11 @@ FOOTER
 
 
 
-
+@media screen and (min-width: 500px) {
+    body.admin-bar #nav-bar {
+        top: 32px;
+    }
+}
 
 
 

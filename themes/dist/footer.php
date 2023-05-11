@@ -24,14 +24,28 @@
         -->
 
         <div class="social-icons">
-            <a href="https://www.facebook.com" target="_blank">
-                <span class="icon-facebook2" aria-hidden="true"></span>
-                <span class="screen-reader-text">Follow on Facebook</span>
-            </a>
-            <a href="https://www.instagram.com" target="_blank">
-                <span class="icon-instagram" aria-hidden="true"></span>
-                <span class="screen-reader-text">Follow on Instagram</span>
-            </a>
+            <?php 
+                $social_links = get_field('social_links', 'options');
+            ?>
+
+            <?php if($social_links['facebook']): ?>
+                <a href="<?php echo $social_links['facebook']; ?>" target="_blank">
+                    <span class="icon-facebook2" aria-hidden="true"></span>
+                    <span class="screen-reader-text"><<?php _e('Follow on Facebook', 'wifi') ?></span>
+                </a>
+            <?php endif; ?>
+            
+            <?php if($social_links['instagram']): ?>
+                <a href="<?php echo $social_links['instagram']; ?>"  target="_blank">
+                    <span class="icon-instagram" aria-hidden="true"></span>
+                    <span class="screen-reader-text">Follow on Instagram</span>
+                </a>
+            <?php endif; ?>
+
+
+
+           
+           
         </div>
 
 

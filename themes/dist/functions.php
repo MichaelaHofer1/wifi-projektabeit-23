@@ -46,6 +46,20 @@
     });
 
 
+    if(function_exists('acf_add_options_page')){
+
+        acf_add_options_page(array(
+            'page_title' => 'Theme Einstellungen',
+            'menu_title' => 'Theme Einstellungen',
+            'menu-slug' => 'webdev-theme-einstellungen',
+            'position' => 80,
+            'icon_url' => 'dashicons-admin-appearance',
+            'update_button' => __('Einstellungen speichern', 'wifi'),
+            'update_message' => __('Einstellungen wurden gespeichert', 'wifi'),
+            'capibility' => 'edit_posts'
+        ));
+    }
+
 
 
 
