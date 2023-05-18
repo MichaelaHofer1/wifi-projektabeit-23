@@ -1,3 +1,14 @@
+/*!
+Theme Name: Michaela Hofer 2023
+Author: Michaela Hofer
+Description: Projektarbeit Wifi 2023
+Version: 1.0.0
+Text Domain: mh
+*/
+
+
+
+
 :root {
     --base-color: #d2d2d2;
     --secondary-color: #000000;
@@ -95,7 +106,6 @@ body {
     margin: 0;
     padding-top: var(--navbar-height-mobile);
     font-family: 'Inter Tight';
-    min-height: 4000px;
 }
 
 @media screen and (min-width:1200px) {
@@ -585,13 +595,12 @@ img {
     }
 }
 
-/*
 .column img {
     object-fit: cover;
-    width: 400px;
+    width: 300px;
     min-height: 400px;
 }
-*/
+
 
 .columns {
     display: flex;

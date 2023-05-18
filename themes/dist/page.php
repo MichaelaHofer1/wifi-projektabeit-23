@@ -11,55 +11,52 @@
 <header class="header-content">
         <div class="header-text">
             <h1>
-                <?php echo $header_homepage['header-headline-firstname'] ?>
+                <?php echo $header_homepage['header-headline-firstname']; ?>
                 <br>
-                <span class="last-name"><?php echo $header_homepage['header-headline-lastname'] ?></span>
-                <span class="profession part1"><?php echo $header_homepage['header-headline-professionfirst'] ?></span><span class="profession part2"><?php echo $header_homepage['header-headline-professionlast'] ?></span>
+                <span class="last-name"><?php echo $header_homepage['header-headline-lastname']; ?></span>
+                <span class="profession part1"><?php echo $header_homepage['header-headline-professionfirst']; ?></span><span class="profession part2"><?php echo $header_homepage['header-headline-professionlast']; ?></span>
             </h1>
         </div>
         <div id="header-slideshow-img-container">
 
             <?php
-                $header_img = get_field('header-home', 'options');
+                echo wp_get_attachment_image($header_homepage['header-img'], 'large');
             ?>
-            <?php if($header_img['header-image-details']): ?>
-                <img src="<?php echo $header_img['header-image-details']; ?>" alt=" ">
-            <?php endif; ?>
 
         </div>
     </header>
 
     <?php
-        $section_headline_sculptures = get_field('hompepage_sculptures','options');
-    ?>   
-    
+        $section_headline_sculptures = get_field('home-sculptures','options');
+        $section_headline_silhouettes = get_field('home-silhouettes','options');
+        $section_headline_uebermich = get_field('home_uber_mich', 'options');
+                    
+        
+        function img_teaser($arg1){
+            echo wp_get_attachment_image($arg1, 'large');
+        }
+                
+    ?>    
     <main id="content" class="container">
-        <section class="sculptures">
+        <section>
             <h2 class="is-style-headline top-headline">
-                <?php echo $section_headline_sculptures['section-headline-sculptures']; ?>
+                <?php echo $section_headline_sculptures['headline-sculptures']; ?>
             </h2>
             <div class="columns">
-
-                <div class="column left">    
-
-                    <?php
-                        $header_img = get_field('section-gallery', 'options');
-                    ?>
-                    <?php if($header_img['sculpture-img-1']): ?>
-                        <img src="<?php echo $header_img['sculpture-img-1']; ?>" alt=" ">
-                    <?php endif; ?>
-
-
+                <div class="column left">
+                    <?php img_teaser($section_headline_sculptures['sculptures-img1']); ?>
                 </div>
                 
                 <div class="column right">
-                    <img src="<?php echo wp_get_attachment_image( 'id_section_gallery', 'medium' ); ?>" alt="">
+                    <?php img_teaser($section_headline_sculptures['sculptures-img2']); ?>
                 </div>
+
                 <div class="column left">
-                    <img src="<?php echo wp_get_attachment_image( 'id_section_gallery', 'medium' ); ?>" alt="">
+                    <?php img_teaser($section_headline_sculptures['sculptures-img3']); ?>
                 </div>
+
                 <div class="column right">
-                    <img src="<?php echo wp_get_attachment_image( 'id_section_gallery', 'medium' ); ?>" alt="">
+                    <?php img_teaser($section_headline_sculptures['sculptures-img4']); ?>
                 </div>
             </div>
             <div class="btn-container column">
@@ -69,34 +66,27 @@
 
 
 
-        <?php
-            $section_headline_silhouettes = get_field('hompepage_silhouettes','options');
-        ?> 
-
-        <section class="silhouettes">
+        <section>
             <h2 class="is-style-headline">
-                <?php $section_headline_silhouettes['section-headline-silhouettes']; ?>
-            </h2>
-
-            
-
-
-
-
+                <?php echo $section_headline_silhouettes['headline-silhouettes']; ?>
+            </h2>            
             <div class="columns">
-                <div class="column">
-                    <img src="assets/img/cat3.jpg" alt="bild1">
+                <div class="column left">
+                    <?php img_teaser($section_headline_silhouettes['silhouettes-img1']); ?>
                 </div>
-                <div class="column">
-                    <img src="assets/img/cat1.jpg" alt="bild1">
+            
+                <div class="column right">
+                    <?php img_teaser($section_headline_silhouettes['silhouettes-img2']); ?>
                 </div>
-                <div class="column">
-                    <img src="assets/img/cat4.jpg" alt="bild1">
+
+                <div class="column left">
+                    <?php img_teaser($section_headline_silhouettes['silhouettes-img3']); ?>
                 </div>
-                <div class="column">
-                    <img src="assets/img/cat3.jpg" alt="bild1">
+
+                <div class="column right">
+                    <?php img_teaser($section_headline_silhouettes['silhouettes-img4']); ?>
                 </div>
-            </div>
+            </div>   
             <div class="btn-container column">
                 <a href="#" class="btn-see-more"></a> 
             </div> 
@@ -106,14 +96,16 @@
 
         <section class="about-me">
             <div class="columns-about-me">
-                    <h2 class="is-style-headline">Über mich</h2>
+                    <h2 class="is-style-headline">
+                        <?php echo $section_headline_uebermich['home_uber_mich_headline']; ?>
+                    </h2>
                 <div class="column-about-me">
                     <div class="about-me-image">
-                        <img src="assets/img/_vorläufig_profile-pic.jpg" alt="bild1">     
+                        <?php img_teaser($section_headline_uebermich['home_uber_mich_img']); ?>
                     </div>
                     <div class="btn-container-about-me column">
-                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                             Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                         <p>
+                            <?php echo $section_headline_uebermich['home_uber_mich_text']; ?>    
                         </p>
                         <a href="#" class="btn-see-more"></a> 
                     </div> 
@@ -121,6 +113,7 @@
                 </div>
             </div>
         </section>
+
 
 
         <section class="contact">
@@ -145,7 +138,7 @@
             </div>
         </section>
     </main>
--->
+
 
 
 

@@ -28,7 +28,7 @@ services:
       WORDPRESS_DB_NAME: exampledb
     volumes:
       - ./data/wordpress:/var/www/html
-      - ./themes/dist:/var/www/html/wp-content/themes/webdev-theme
+      - ./themes/dist:/var/www/html/wp-content/themes/projektarbeit2023
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
