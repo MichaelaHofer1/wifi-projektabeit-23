@@ -220,7 +220,7 @@
 
             acf_register_block_type(array(
                 'name' => 'carousel-auto',
-                'title' => __('caoursel-auto', 'mh'),
+                'title' => __('carousel-auto', 'mh'),
                 'description' => __('Das ist ein Karusell', 'mh'),
                 'supports' => array('anchor' => false), 
                 'category' => 'mh',
@@ -229,7 +229,12 @@
                 'align' => false,
                 'mode' => false,
                 'icon' =>'welcome-widgets-menus',
-                'render_template' => 'template-parts/blocks/block-carousel-auto.php'
+                'render_template' => 'template-parts/blocks/block-carousel-auto.php',
+                'enqueue_assets' => function(){
+                    wp_enqueue_style('splideCss', get_template_directory_uri() . '/assets/css/splide.min.css');
+                    wp_enqueue_script('splideMain', get_template_directory_uri() . '/assets/js/splide.min.js');
+                    wp_enqueue_script('splideConfig', get_template_directory_uri() . '/assets/js/splideConfig.js');
+                }
              ));
         }
 

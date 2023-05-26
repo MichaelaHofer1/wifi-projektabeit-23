@@ -18,7 +18,7 @@
     <div class="columns-about-me">
         <?php 
             $headline = $section_aboutme['headline'];
-            include(get_template_directory(  ) . '/template-parts/is-style-headline-loop.php');
+            include(get_template_directory(  ) . '/template-parts/loops/is-style-headline-loop.php');
         ?>
 
         <div class="column-about-me">

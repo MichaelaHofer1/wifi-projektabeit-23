@@ -17,7 +17,7 @@
 <div class="<?php echo $class_name; ?>">
     <?php 
         $headline = $gallery_header['headline'];
-        include(get_template_directory(  ) . '/template-parts/is-style-headline-loop.php');
+        include(get_template_directory(  ) . '/template-parts/loops/is-style-headline-loop.php');
     ?>
     <p>
         <?php echo $gallery_header['description']; ?>    

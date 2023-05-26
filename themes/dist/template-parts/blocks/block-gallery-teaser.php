@@ -17,12 +17,12 @@
         <section  class="<?php echo $class_name; ?>">
             <?php 
                 $headline = $section_headline_sculptures['headline'];
-                include(get_template_directory(  ) . '/template-parts/is-style-headline-loop.php');
+                include(get_template_directory(  ) . '/template-parts/loops/is-style-headline-loop.php');
             ?>
 
             <?php 
                 $images = $section_headline_sculptures['gallery'];
-                include(get_template_directory(  ) . '/template-parts/teaser-gallery-loop.php'); 
+                include(get_template_directory(  ) . '/template-parts/loops/teaser-gallery-loop.php'); 
             ?>
                         
             <div class="btn-container column">
