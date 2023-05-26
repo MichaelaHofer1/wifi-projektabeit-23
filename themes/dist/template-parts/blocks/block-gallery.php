@@ -18,7 +18,7 @@
             <?php 
                 $images = $gallery['gallery-imgs'];
                 $img_description = $gallery['img-description'];
-                include(get_template_directory(  ) . '/template-parts/loops/teaser-gallery-loop.php'); 
+                include(get_template_directory(  ) . '/template-parts/loops/teaser-gallery-loop-array.php'); 
             ?>
         </section>
 <?php 
