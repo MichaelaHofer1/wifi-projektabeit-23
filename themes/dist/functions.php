@@ -238,6 +238,40 @@
              ));
         }
 
+        if(function_exists('acf_register_block_type')){
+
+            acf_register_block_type(array(
+                'name' => 'about-me-header',
+                'title' => __('Über mich Kopfbereich', 'mh'),
+                'description' => __('Das ist der Kopfbereich der "Über mich" Seite', 'mh'),
+                'supports' => array('anchor' => false), 
+                'category' => 'mh',
+                'keywords' => array('section', 'mh', 'Über mich'),
+                'post_type' => array('page'),
+                'align' => false,
+                'mode' => false,
+                'icon' =>'welcome-widgets-menus',
+                'render_template' => 'template-parts/blocks/block-about-me-header.php'
+             ));
+        }
+
+        if(function_exists('acf_register_block_type')){
+
+            acf_register_block_type(array(
+                'name' => 'about-me-lists',
+                'title' => __('Über mich Aufzählungen', 'mh'),
+                'description' => __('Das ist der Inhaltsbereich der "Über mich" Seite', 'mh'),
+                'supports' => array('anchor' => false), 
+                'category' => 'mh',
+                'keywords' => array('section', 'mh', 'Über mich'),
+                'post_type' => array('page'),
+                'align' => false,
+                'mode' => false,
+                'icon' =>'welcome-widgets-menus',
+                'render_template' => 'template-parts/blocks/block-about-me-lists.php'
+             ));
+        }
+
 
 
     });

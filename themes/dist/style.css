@@ -125,7 +125,20 @@ h2 {
     font-weight: 300;
 }
 
-h3,
+h3 {
+    margin: 100px auto 0;
+    padding: 0;
+    position: relative;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+
+
+
+
+
 h4,
 h5,
 h6 {
@@ -1249,11 +1262,53 @@ FOOTER
 
 
 
+.list-container {
+    width: 60%;
+    margin: 0 auto;
+}
 
 
 
+ul .list {
+    list-style-type: square;
+    padding-top: 1.8em;
+}
+
+.about-me > h2 {
+    padding-top: 150px ;
+}
+
+.about-me-page h3 {
+    width: 70%;
+}
 
 
+
+@media screen and (min-width: 900px) {
+    .about-me-img {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+    }
+
+    .about-me-img img {
+        max-height: 420px;  
+        object-fit: cover;
+    }
+
+    .about-me-page {
+        max-width: 70%;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .about-me-img {
+        position: absolute;
+        right: 15%;
+        top: 55%;
+    }
+}
 
 
 
