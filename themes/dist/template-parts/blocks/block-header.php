@@ -1,9 +1,16 @@
 <?php
-    $class_name = 'header-content';
 
+$anchor = '';
+    if(!empty($block['anchor'])){
+        $anchor = 'id="' . esc_attr($block['anchor']) . '"';
+    }
+
+
+$class_name = 'header-content';
     if(!empty($block['className'])){
         $class_name .= ' ' . esc_attr($block['className']);
     }
+
 ?>
 
 
@@ -23,13 +30,18 @@
                 <span class="profession part1"><?php echo $header_homepage['header-headline-professionfirst']; ?></span><span class="profession part2"><?php echo $header_homepage['header-headline-professionlast']; ?></span>
             </h1>
         </div>
-        <div id="header-slideshow-img-container">
 
-            <?php
-                echo wp_get_attachment_image($header_homepage['header-img'], 'large');
-            ?>
 
+        <div id="header-slideshow-img-container" class="splide">
+            <div class="splide__track">
+                <?php 
+                    $images = $header_homepage['carousel-imgs'];
+                    include(get_template_directory()  . '/template-parts/loops/carousel-auto-loop.php' );
+                ?>
+            </div>
         </div>
+
+
     </header>
     <main id="content" class="container"> 
     

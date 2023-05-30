@@ -432,7 +432,7 @@ img {
 /****************************** */
 /* HEADER */
 .header-text,
-#header-slideshow-img-container {
+#header-slideshow-img-container{
     height: calc( (100vh - var(--navbar-height-mobile)) / 2);
 }
 
@@ -523,7 +523,7 @@ img {
 #header-slideshow-img-container img {
    object-fit: cover;
    height: calc((100vh - var(--navbar-height-mobile)) / 2);
-   width: 100%;
+   width: 100vw;
    filter: grayscale(100%);
 }
 

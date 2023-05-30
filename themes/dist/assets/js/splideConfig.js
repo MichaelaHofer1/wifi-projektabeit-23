@@ -5,7 +5,7 @@ window.addEventListener( 'load', function() {
 
   
     const sliderInitalize = function (){
-      let splide = new Splide( '.splide', {
+      var splide = new Splide( '#splide-sculptures', {
         type: 'loop',
         height: '400px',
         width: '600px',
@@ -17,7 +17,7 @@ window.addEventListener( 'load', function() {
         pagination: false, 
       } );
       splide.mount();
-    };
+    }
 
     sliderInitalize();
 
@@ -28,3 +28,33 @@ window.addEventListener( 'load', function() {
 
 
 } );
+
+
+
+
+window.addEventListener( 'load', function() {       
+
+      
+      const sliderInitalize = function (){
+        var splide = new Splide( '#header-slideshow-img-container', {
+          type: 'loop',
+          easing: 'linear',
+          autoplay: 'true',
+          perPage: 1,
+          interval: '5000',
+          speed: '1000',
+          pagination: false, 
+          arrows: false
+        } );
+        splide.mount();
+      };
+
+      sliderInitalize();
+
+      if(window.acf){
+          window.acf.addAction('render_block_preview/type=header', sliderInitalize)
+      }
+
+
+
+    } );

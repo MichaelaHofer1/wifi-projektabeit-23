@@ -1,5 +1,5 @@
 <?php
-    $class_name = 'carousel-sculptures splide';
+    $class_name = '.splide-details';
 
     if(!empty($block['className'])){
         $class_name .= ' ' . esc_attr($block['className']);
@@ -8,24 +8,21 @@
 
 
 <?php
-    $carousel = get_field('carousel-auto');
+    $carousel_details = get_field('header-home');
 ?>
 
 
-<?php if(!empty($carousel)): ?>
+<?php if(!empty($carousel_details)): ?>
 
-    <section  class="<?php echo $class_name; ?>" id="splide-sculptures">
+    <section  class="<?php echo $class_name; ?>">
         <div class="splide__track carousel-container">
             <?php 
-                $images = $carousel['carousel-auto-fast'];
+                $images = $carousel['carousel-imgs'];
                 include(get_template_directory()  . '/template-parts/loops/carousel-auto-loop.php' );
             ?>
         </div>
-        <p>
-            <?php echo $carousel['carousel-description']; ?>
-        </p>
     </section>
-
+    
 <?php 
     endif;
 ?>
