@@ -1,0 +1,27 @@
+
+TO-DO PROJEKTARBEIT:	
+
+JS:
++ ein-faden von Content
++ To-Top Button
+
+
+CSS:
+- Galerie-Nav fixen
+- Kontakt-Nav fixen
+- Footer-Nav Schrift kleiner/schmäler
+- Nav-Leiste bei Scrollen kleiner werden
+
+
+anderes:
+- Lightbox für Galerien
+- Galerie-Seite Lösung finden
+- Kontaktformular
+- Bilder austauschen + beschriften
+- Texte schreiben + einfügen
+- CSS in SCSS umschreiben
+- 404-Seite erstellen
+- Impressum und Datenschutzseite erstellen
+- Beiträge stylen und evtl. ein paar anlegen
+- Archive stylen und evtl. eines anlegen
+- Beitragsfunktion muss gestylt sein und funktionieren

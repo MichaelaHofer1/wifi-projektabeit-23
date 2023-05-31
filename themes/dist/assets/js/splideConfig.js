@@ -38,11 +38,11 @@ window.addEventListener( 'load', function() {
       const sliderInitalize = function (){
         var splide = new Splide( '#header-slideshow-img-container', {
           type: 'loop',
-          easing: 'linear',
+          easing: 'ease',
           autoplay: 'true',
           perPage: 1,
           interval: '5000',
-          speed: '1000',
+          speed: '750',
           pagination: false, 
           arrows: false
         } );

@@ -56,6 +56,9 @@
         </div>
     </footer>
 
+    
+    <div id="to-top">&#11165;</div>
+
     <?php
         wp_footer();
     
