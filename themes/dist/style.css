@@ -1050,7 +1050,7 @@ Columns
 }
 
 .column.btn-container {
-    padding: 130px 0 0px;
+    padding-bottom: 50px;
 }
 
 
@@ -1317,8 +1317,8 @@ ul .list {
 
  #to-top {
     position: fixed;
-    right: 30px;
-    bottom: 30px;
+    right: 1%;
+    bottom: 25px;
     z-index: 1000;
     font-size: 3em;
     cursor: pointer;

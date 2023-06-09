@@ -52,7 +52,7 @@ function elementsInViewport() {
 
 
 function addAnimate() {
-    let addClassAnimate = document.querySelectorAll('h1, h2, h3, p, .column, .columns, img') 
+    let addClassAnimate = document.querySelectorAll(' h2, h3, p, .column, .columns, img') 
 
     for (let i = 0; i < addClassAnimate.length; i++) {
         addClassAnimate[i].classList.add('animate')
