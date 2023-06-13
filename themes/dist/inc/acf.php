@@ -1,0 +1,198 @@
+<?php
+if(function_exists('acf_add_options_page')){
+
+acf_add_options_page(array(
+    'page_title' => 'Theme Einstellungen',
+    'menu_title' => 'Theme Einstellungen',
+    'menu-slug' => 'projektarbeit-theme-einstellungen',
+    'position' => 80,
+    'icon_url' => 'dashicons-admin-appearance',
+    'update_button' => __('Einstellungen speichern', 'mh'),
+    'update_message' => __('Einstellungen wurden gespeichert', 'mh'),
+    'capibility' => 'edit_posts'
+));
+}
+
+
+
+//ACF Blöcke
+add_action('acf/init', function(){
+
+if(function_exists('acf_register_block_type')){
+
+    acf_register_block_type(array(
+        'name' => 'projektarbeit-header',
+        'title' => __('header', 'mh'),
+        'description' => __('Das ist der Headerbereich', 'mh'),
+        'supports' => array('anchor' => false), 
+        'category' => 'mh',
+        'keywords' => array('header', 'mh', 'kopfbereich'),
+        'post_type' => array('page'),
+        'align' => false,
+        'mode' => false,
+        'icon' =>'welcome-widgets-menus',
+        'render_template' => 'template-parts/blocks/block-header.php',                
+        'enqueue_assets' => function(){
+            wp_enqueue_style('splideCss', get_template_directory_uri() . '/assets/css/splide.min.css');
+            wp_enqueue_script('splideMain', get_template_directory_uri() . '/assets/js/splide.min.js');
+            wp_enqueue_script('splideConfig', get_template_directory_uri() . '/assets/js/splideConfig.js');
+        }
+     ));
+}
+
+
+if(function_exists('acf_register_block_type')){
+
+    acf_register_block_type(array(
+        'name' => 'gallery teaser',
+        'title' => __('gallery-teaser', 'mh'),
+        'description' => __('Das ist der Galerie Teaser-Bereich', 'mh'),
+        'supports' => array('anchor' => false), 
+        'category' => 'mh',
+        'keywords' => array('section', 'mh', 'skulpturen'),
+        'post_type' => array('page'),
+        'align' => false,
+        'mode' => false,
+        'icon' =>'welcome-widgets-menus',
+        'render_template' => 'template-parts/blocks/block-gallery-teaser.php'
+     ));
+}
+
+if(function_exists('acf_register_block_type')){
+
+    acf_register_block_type(array(
+        'name' => 'about-me teaser',
+        'title' => __('about-me-teaser', 'mh'),
+        'description' => __('Das ist der "Über mich" Teaser-Bereich', 'mh'),
+        'supports' => array('anchor' => false), 
+        'category' => 'mh',
+        'keywords' => array('section', 'mh', 'über mich'),
+        'post_type' => array('page'),
+        'align' => false,
+        'mode' => false,
+        'icon' =>'welcome-widgets-menus',
+        'render_template' => 'template-parts/blocks/block-aboutme-teaser.php'
+     ));
+}
+
+if(function_exists('acf_register_block_type')){
+
+    acf_register_block_type(array(
+        'name' => 'gallery-header',
+        'title' => __('gallery-header', 'mh'),
+        'description' => __('Das ist der Headerbereich von Galerien', 'mh'),
+        'supports' => array('anchor' => false), 
+        'category' => 'mh',
+        'keywords' => array('section', 'mh', 'Galerie'),
+        'post_type' => array('page'),
+        'align' => false,
+        'mode' => false,
+        'icon' =>'welcome-widgets-menus',
+        'render_template' => 'template-parts/blocks/block-gallery-header.php'
+     ));
+}
+
+if(function_exists('acf_register_block_type')){
+
+    acf_register_block_type(array(
+        'name' => 'gallery',
+        'title' => __('gallery', 'mh'),
+        'description' => __('Das ist der Galeriebereich', 'mh'),
+        'supports' => array('anchor' => false), 
+        'category' => 'mh',
+        'keywords' => array('section', 'mh', 'Galerie'),
+        'post_type' => array('page'),
+        'align' => false,
+        'mode' => false,
+        'icon' =>'welcome-widgets-menus',
+        'render_template' => 'template-parts/blocks/block-gallery.php'
+     ));
+}
+
+
+if(function_exists('acf_register_block_type')){
+
+    acf_register_block_type(array(
+        'name' => 'carousel-auto',
+        'title' => __('carousel-auto', 'mh'),
+        'description' => __('Das ist ein Karusell', 'mh'),
+        'supports' => array('anchor' => false), 
+        'category' => 'mh',
+        'keywords' => array('section', 'mh', 'carousel'),
+        'post_type' => array('page'),
+        'align' => false,
+        'mode' => false,
+        'icon' =>'welcome-widgets-menus',
+        'render_template' => 'template-parts/blocks/block-carousel-auto.php',
+        'enqueue_assets' => function(){
+            wp_enqueue_style('splideCss', get_template_directory_uri() . '/assets/css/splide.min.css');
+            wp_enqueue_script('splideMain', get_template_directory_uri() . '/assets/js/splide.min.js');
+            wp_enqueue_script('splideConfig', get_template_directory_uri() . '/assets/js/splideConfig.js');
+        }
+     ));
+}
+
+/*
+if(function_exists('acf_register_block_type')){
+
+    acf_register_block_type(array(
+        'name' => 'carousel-details',
+        'title' => __('Karusell-Header (Details)', 'mh'),
+        'description' => __('Das ist ein Karusell', 'mh'),
+        'supports' => array('anchor' => false), 
+        'category' => 'mh',
+        'keywords' => array('section', 'mh', 'carousel'),
+        'post_type' => array('page'),
+        'align' => false,
+        'mode' => false,
+        'icon' =>'welcome-widgets-menus',
+        'render_template' => 'template-parts/blocks/block-carousel-details.php',
+        'enqueue_assets' => function(){
+            wp_enqueue_style('splideCss', get_template_directory_uri() . '/assets/css/splide.min.css');
+            wp_enqueue_script('splideMain', get_template_directory_uri() . '/assets/js/splide.min.js');
+            wp_enqueue_script('splideConfig', get_template_directory_uri() . '/assets/js/splideConfig.js');
+        }
+     ));
+}
+*/
+
+if(function_exists('acf_register_block_type')){
+
+    acf_register_block_type(array(
+        'name' => 'about-me-header',
+        'title' => __('Über mich Kopfbereich', 'mh'),
+        'description' => __('Das ist der Kopfbereich der "Über mich" Seite', 'mh'),
+        'supports' => array('anchor' => false), 
+        'category' => 'mh',
+        'keywords' => array('section', 'mh', 'Über mich'),
+        'post_type' => array('page'),
+        'align' => false,
+        'mode' => false,
+        'icon' =>'welcome-widgets-menus',
+        'render_template' => 'template-parts/blocks/block-about-me-header.php'
+     ));
+}
+
+if(function_exists('acf_register_block_type')){
+
+    acf_register_block_type(array(
+        'name' => 'about-me-lists',
+        'title' => __('Über mich Aufzählungen', 'mh'),
+        'description' => __('Das ist der Inhaltsbereich der "Über mich" Seite', 'mh'),
+        'supports' => array('anchor' => false), 
+        'category' => 'mh',
+        'keywords' => array('section', 'mh', 'Über mich'),
+        'post_type' => array('page'),
+        'align' => false,
+        'mode' => false,
+        'icon' =>'welcome-widgets-menus',
+        'render_template' => 'template-parts/blocks/block-about-me-lists.php'
+     ));
+}
+
+
+
+});
+
+
+

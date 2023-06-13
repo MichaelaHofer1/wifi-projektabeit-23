@@ -100,6 +100,7 @@ Text Domain: mh
 html {
     font-size: var(--base-font-size);
     line-height: var(--base-line-height) ;
+    scroll-behavior: smooth;
 }
 
 body {
