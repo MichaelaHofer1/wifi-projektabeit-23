@@ -191,6 +191,23 @@ if(function_exists('acf_register_block_type')){
 }
 
 
+if(function_exists('acf_register_block_type')){
+
+    acf_register_block_type(array(
+        'name' => 'lightbox',
+        'title' => __('lightbox', 'mh'),
+        'description' => __('Das ist die Detailansicht in einer Lightbox', 'mh'),
+        'supports' => array('anchor' => false), 
+        'category' => 'mh',
+        'keywords' => array('section', 'mh', 'lightbox'),
+        'post_type' => array('page'),
+        'align' => false,
+        'mode' => false,
+        'icon' =>'welcome-widgets-menus',
+        'render_template' => 'template-parts/blocks/block-lightbox.php'
+     ));
+}
+
 
 });
 

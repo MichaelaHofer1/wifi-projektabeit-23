@@ -14,12 +14,13 @@ CSS:
 
 
 anderes:
++ CSS in SCSS umschreiben
+
 - Lightbox für Galerien
 - Galerie-Seite Lösung finden
 - Kontaktformular
 - Bilder austauschen + beschriften
 - Texte schreiben + einfügen
-- CSS in SCSS umschreiben
 - 404-Seite erstellen
 - Impressum und Datenschutzseite erstellen
 - Beiträge stylen und evtl. ein paar anlegen

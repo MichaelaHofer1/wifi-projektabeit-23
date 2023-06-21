@@ -9,7 +9,7 @@ gulp.task('css-style', () =>
             outputStyle: 'compressed'
         }).on('error', sass.logError))
         .pipe(postcss([ autoprefixer() ]))
-        .pipe(gulp.dest('/themes/dist'))
+        .pipe(gulp.dest('./dist'))
 );
 
 gulp.task('watch', () =>
