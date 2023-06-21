@@ -1,0 +1,76 @@
+@use "../abstracts/variables" as *;
+
+
+.column-about-me {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20%;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 0 10%;
+    @media screen and (min-width: $tablet-breakpoint) {
+        flex-direction: row;
+    }
+}
+
+
+.about-me-image {
+    display: flex;
+    justify-content: center;
+    img {
+        max-width: 300px;
+    }
+    @media screen and (min-width: $tablet-breakpoint) {
+        order: 1;
+    }
+    @media screen and (min-width: $desktop-breakpoint) {
+        height: 100%;
+    }
+}
+
+.btn-container-about-me {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    max-width: 400px;
+    &.colum::after {
+        display: none;
+    }
+    p {  
+        @media screen and (min-width: $desktop-breakpoint) {
+            padding-top: 50px;
+        }
+    }
+}
+
+.about-me {
+    @media screen and (min-width: $desktop-breakpoint) {
+        position: relative;
+        .columns {
+            padding: 100px 20% 0;
+        }
+        .column:first-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 40%;
+        }
+        .btn-container{
+            position: absolute;
+            top: 70%;
+            left: 35%;
+            transform: translateX(-50%);
+        }
+        .btn-see-more {
+            transform: scale(.5) translateY(-50%) ;
+            margin: 0;
+            &::before,
+            &::after {
+                height: 2px;
+            }
+        }
+    }
+}
+

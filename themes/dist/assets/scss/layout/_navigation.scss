@@ -1,0 +1,171 @@
+@use "../abstracts/variables" as *;
+
+#nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $base-color;
+    color: $secondary-color;
+    z-index: 1000;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: $navbar-height-mobile;
+
+        @media (min-width: $desktop-breakpoint) {
+            height: $navbar-height-desktop;
+        }
+    } 
+}
+
+
+#brand {
+    height: calc($navbar-height-mobile / 1.5);
+    width: calc($navbar-height-mobile / 1.5);
+    img {
+        height: 100%;
+        filter: grayscale(100%);
+    }
+    
+    @media (min-width: $desktop-breakpoint) {
+        height: calc($navbar-height-mobile / 1.1);
+        width: calc($navbar-height-mobile / 1.1);
+    }
+}
+
+
+
+.nav-menu,
+.sub-menu {
+    margin: 0;
+}
+
+#nav-main{
+    position: fixed;
+    top: $navbar-height-mobile - 1px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 3.5em 5%;
+    text-align: center;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease-in;
+    
+    @media (min-width: $desktop-breakpoint) {
+        position: static;
+        display: flex;
+        padding: 0;
+        overflow: visible;
+        opacity: 1;
+        pointer-events: auto;
+        background: transparent;
+    }
+
+    a,
+    .sub-menu a {
+        color: $secondary-color;
+        font-size: 1.3em;
+        line-height: 2.3em;
+        font-weight: 200;
+        text-transform: uppercase ;
+        transition: color 200ms linear;
+        letter-spacing: 5px;
+    }
+    .sub-menu a {
+        font-size: 1.2em;
+        letter-spacing: 3px;
+    }
+    a:hover {
+        color: $contrast-color;
+    }
+    .current-menu-item {
+        position: relative;
+        a {
+            color: $contrast-color;
+        }
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 30px;
+            width: 2px;
+            background-color: $contrast-color;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 30px;
+            width: 2px;
+            background-color: $contrast-color;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    }
+    
+
+}
+
+
+
+.sub-menu {
+    padding: 0 0 1em;
+
+    @media (min-width: $desktop-breakpoint) {
+        position: absolute;
+        display: none;
+        opacity: 0;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50% -20px);
+        background: linear-gradient(0deg, $base-color 0%, $gradient-color3 100%);
+        line-height: 1em;
+        padding: .5em 0 1em;
+        transition: transform 350ms linear, opacity 250ms linear;
+        border-radius: 0 0 5px 5px ;
+    }
+}
+
+
+
+
+@media screen and (min-width: $desktop-breakpoint) {
+    #nav-main {
+        a {
+        padding: calc((100px - 29px) /2) 2em ;
+        }
+        .sub-menu a {
+            padding: .5em 1em;
+        }
+        li {
+            position: relative;
+            line-height: $navbar-height-desktop;
+        }
+    }
+
+    #nav-main > li:last-child a {
+        padding: calc((100px - 29px) /2) 0 calc((100px - 29px) /2) 2em;
+    }
+
+
+
+    #nav-main .sub-menu li {
+        line-height: 3em;
+        text-align: center;
+    }
+
+    #nav-main li:hover > .sub-menu {
+        display: block;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, 0);
+    }
+}
+

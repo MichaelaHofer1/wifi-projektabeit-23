@@ -1,0 +1,83 @@
+@use "../abstracts/variables" as *;
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding-top: $navbar-height-mobile;
+    font-family: 'Inter Tight';
+
+    @media (min-width: $desktop-breakpoint) {
+        padding-top: $navbar-height-desktop;
+    }
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 100;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.7em;
+    font-weight: 300;
+}
+
+h3 {
+    margin: 100px auto 0;
+    padding: 0;
+    position: relative;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+
+
+
+a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 150ms linear;
+    &:hover  {
+        color: $contrast-color;
+    }
+    &:active {
+        color: $base-color;
+    }
+}
+
+
+li,
+ul {
+    list-style: none;
+    padding:0;    
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.container {
+    padding: 0 5%;
+}
+
