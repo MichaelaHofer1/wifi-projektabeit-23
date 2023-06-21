@@ -37,3 +37,24 @@
     }
 }
     
+
+
+#to-top {
+    position: fixed;
+    right: 1%;
+    bottom: 25px;
+    z-index: 1000;
+    font-size: 3em;
+    cursor: pointer;
+    color: #3b3b3b;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease-in-out, transform 200ms linear;
+    &:hover {
+        transform: translateY(-10%);        
+    }
+    .show {
+        opacity: 1;
+        pointer-events: auto;        
+    }
+}

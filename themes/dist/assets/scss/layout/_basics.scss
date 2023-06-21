@@ -81,3 +81,8 @@ img {
     padding: 0 5%;
 }
 
+body.admin-bar #nav-bar {
+    @media screen and (min-width: $tablet-breakpoint){
+        top: 32px;
+    }
+}

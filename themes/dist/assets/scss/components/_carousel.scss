@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as *;
+
+.carousel-container {
+    position: relative;
+    padding-bottom: .5em;
+    margin-bottom: 8em;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;  
+    }
+    p {
+        margin: 0 0 10em 0 ;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    @media screen and (min-width: $tablet-breakpoint) {
+        margin-bottom: 12em;
+    }
+}

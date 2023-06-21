@@ -1,0 +1,42 @@
+@use "../abstracts/variables" as *;
+
+
+.list-container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+ul .list {
+    list-style-type: square;
+    padding-top: 1.8em;
+}
+
+.about-me > h2 {
+    padding-top: 150px ;
+}
+
+.about-me-page {
+    h3 {
+        width: 70%;
+    }
+    @media screen and (min-width: $tablet-breakpoint) {
+        max-width: 70%;
+    }
+}
+
+.about-me-img {
+    @media screen and (min-width: $tablet-breakpoint) {
+        position: absolute;
+        right: 5%;
+        top: 50%;   
+        img {
+            max-height: 420px;  
+            object-fit: cover;            
+        }     
+    }   
+     @media screen and (min-width: $desktop-breakpoint) {
+        position: absolute;
+        right: 15%;
+        top: 55%;        
+     }
+}

@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as *;
+
+
+.js .animate {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity 400ms linear, transform 400ms linear;
+    transition-delay: 200ms;
+    &.animated {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
