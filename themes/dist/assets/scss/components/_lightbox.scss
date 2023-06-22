@@ -19,21 +19,48 @@
     left: 5%;
     background-color: white;
     max-height: 100vh;
-    display: grid;
-    grid-template-rows: 2fr 1fr 1fr;
+    @media screen and (min-width: $tablet-breakpoint) {
+        display: flex;    
+    }    
+    .details {
+        @media screen and (min-width: $tablet-breakpoint) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 35%;
+        }
+    }
     .img-big {
         height: 60vh;
         width: 100%;
         text-align: center;
+        padding-top: 1em;
         img {    
             @include imgCover; 
             width: auto;
+            @media screen and (min-width: $tablet-breakpoint) {
+                width: 100%;
+            }
+        }        
+        @media screen and (min-width: $tablet-breakpoint) {
+            text-align: start;
+            padding: 1em;
+            padding-right: 0;
+            height: 100%;
         }
     }
     .imgs-small {
         display: flex;
         justify-content: center;
-        gap: 30px;
+        gap: 20px;
+        @media screen and (min-width: $small-tablet-breakpoint) {
+            padding: 0 1em;
+        }
+        @media screen and (min-width: $tablet-breakpoint) {
+            order: 1;
+            flex-wrap: wrap;
+            justify-content: start;
+        }
         .lightbox-small-boxes {
             max-height: 10vh;
             width: calc(100% / 3);
@@ -42,6 +69,11 @@
             @include imgCover;
         }
     }
+    .description {
+        padding: 1em;
+    }
+    
+    
 }
 
 
@@ -68,6 +100,9 @@
     height: 40px;
     width: 40px;
     display: block;
+    &:hover {
+        cursor: pointer;
+    }
     &::before,
     &::after {
         content: "";

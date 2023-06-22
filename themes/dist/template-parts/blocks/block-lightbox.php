@@ -32,23 +32,24 @@ $class_name = 'header-content';
                 <?php echo wp_get_attachment_image($lightbox['big-img'] ); ?>
             </div>
 
-
             <?php 
                 $images = $lightbox['details'];
                 if ($images): 
             ?>
-            <ul class="imgs-small">
-                <?php foreach($images as $image): ?>
-                    <li class="lightbox-small-boxes">
-                        <?php echo wp_get_attachment_image ($image['detail-imgs'], 'large'); ?>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-            <?php endif ?>
-            <div class="description">
-                <p>
-                    <?php echo $lightbox['description']; ?>
-                </p>
+            <div class="details">
+                <ul class="imgs-small">
+                    <?php foreach($images as $image): ?>
+                        <li class="lightbox-small-boxes">
+                            <?php echo wp_get_attachment_image ($image['detail-imgs'], 'large'); ?>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+                <?php endif ?>
+                <div class="description">
+                    <p>
+                        <?php echo $lightbox['description']; ?>
+                    </p>
+                </div>
             </div>
 
         </div>
