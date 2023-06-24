@@ -53,7 +53,7 @@
     &:hover {
         transform: translateY(-10%);        
     }
-    .show {
+    &.show {
         opacity: 1;
         pointer-events: auto;        
     }

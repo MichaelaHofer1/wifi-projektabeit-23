@@ -20,7 +20,7 @@ $class_name = 'header-content';
 <?php if(!empty($lightbox)): ?>
 
 
-<div>
+<div id="lightbox-info">
     <input type="checkbox" id="lightbox-toggle">
     <label for="lightbox-toggle" id="lightbox-button">
         <span id="lightbox-button-icon" aria-hidden="true"></span>
@@ -28,18 +28,22 @@ $class_name = 'header-content';
     </label>
     <div id="lightbox">
         <div class="lightbox-container">
-            <div class="img-big">
-                <?php echo wp_get_attachment_image($lightbox['big-img'] ); ?>
+            <!-- <div id="img-big">
+                <?php // echo wp_get_attachment_image($lightbox['big-img'] ); ?>
             </div>
+            -->
 
             <?php 
                 $images = $lightbox['details'];
                 if ($images): 
             ?>
-            <div class="details">
+            <!-- <div class="details"> -->
                 <ul class="imgs-small">
+                    <li class="detail-img-big select">
+                        <?php echo wp_get_attachment_image($lightbox['big-img'] ); ?>
+                    </li>
                     <?php foreach($images as $image): ?>
-                        <li class="lightbox-small-boxes">
+                        <li class="lightbox-small-boxes select">
                             <?php echo wp_get_attachment_image ($image['detail-imgs'], 'large'); ?>
                         </li>
                     <?php endforeach; ?>
@@ -50,7 +54,7 @@ $class_name = 'header-content';
                         <?php echo $lightbox['description']; ?>
                     </p>
                 </div>
-            </div>
+            <!-- </div> -->
 
         </div>
     </div>  

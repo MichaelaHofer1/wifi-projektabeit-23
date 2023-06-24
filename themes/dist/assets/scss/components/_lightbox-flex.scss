@@ -30,12 +30,12 @@
             width: 35%;
         }
     }
-    .img-big {
+    #img-big {
         height: 60vh;
-        width: 100%;
+        width: 100%; 
         text-align: center;
         padding-top: 1em;
-        img {    
+        img {     
             @include imgCover; 
             width: auto;
             @media screen and (min-width: $tablet-breakpoint) {
@@ -71,10 +71,11 @@
     }
     .description {
         padding: 1em;
-    }
-    
-    
+    }    
 }
+
+
+
 
 
 
