@@ -10,8 +10,11 @@ $class_name = 'header-content';
     if(!empty($block['className'])){
         $class_name .= ' ' . esc_attr($block['className']);
     }
-
 ?>
+
+
+
+
 
 <?php
     $lightbox = get_field('lightbox')
