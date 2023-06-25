@@ -23,7 +23,7 @@
 
         <?php $key = wp_generate_password(12, false, false); ?>
         <div class="column">
-                <?php echo wp_get_attachment_image($image['big-img']); ?>
+            <?php echo wp_get_attachment_image($image['big-img']); ?>
             <div class="img-description">
                 <?php echo $image['short-description']; ?>
             </div>
@@ -43,7 +43,7 @@
             ?>
             <ul class="imgs-small">
                 <li class="detail-img-big select">
-                    <?php echo wp_get_attachment_image($image['big-img']); ?>
+                    <?php echo wp_get_attachment_image($image['big-img'], 'large'); ?>
                 </li>
                 <?php $imageDetail = $image['details']?>
                 <?php foreach($imageDetail as $img): ?>

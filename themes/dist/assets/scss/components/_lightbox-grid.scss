@@ -9,6 +9,7 @@
     bottom: 0;
     right: 0;
     z-index: 1001;
+    display: none;
 }
 
 .lightbox-container {
@@ -119,7 +120,7 @@
     position: relative;
     height: 40px;
     width: 40px;
-    display: block;
+    display: none;
     &:hover {
         cursor: pointer;
     }
@@ -153,7 +154,11 @@ input[id^='lightbox-toggle'] {
     display: none;
     &:checked ~ .lightbox,
     &:checked ~ .lightbox-button {
-        display: none;
-    }
+        display: block; 
+        .lightbox-button-icon {
+            display: block;
+        }
+
+    }    
 }
 

@@ -36,32 +36,5 @@
             ));
             ?>
 
-
-
-            <!--
-            <ul id="nav-main" class="nav-menu">
-                <li class="current-menu-item">
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="gallery.html">Galerie</a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="sculptures.html">Skulpturen</a>
-                        </li>
-                        <li>
-                            <a href="silhouettes.html">Scherenschnitte</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="about-me.html">Über mich</a>
-                </li>
-                <li>
-                    <a href="contact.html">Kontakt</a>
-                </li>
-            </ul>
-                !-->
-
         </div>
     </nav>

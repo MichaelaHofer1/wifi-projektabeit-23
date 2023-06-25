@@ -1,5 +1,17 @@
 <?php
 if(function_exists('acf_add_options_page')){
+    add_filter('acf/settings/save_json', function($path){
+        $path = get_template_directory() . '/acf-fields';
+        return $path;
+    });
+    
+    add_filter('acf/settings/load_json', function($paths){
+        unset($paths[0]);
+        $paths[] = get_template_directory(  ) . '/acf-fields';
+        return $paths;
+    });
+    
+    
 
 acf_add_options_page(array(
     'page_title' => 'Theme Einstellungen',

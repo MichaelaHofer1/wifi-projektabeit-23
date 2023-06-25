@@ -22,7 +22,7 @@
 
             <?php 
                 $images = $section_headline_sculptures['gallery'];
-                include(get_template_directory(  ) . '/template-parts/loops/teaser-gallery-loop-array.php'); 
+                include(get_template_directory(  ) . '/template-parts/loops/teaser-gallery-loop.php'); 
             ?>
                         
             <div class="btn-container column">
