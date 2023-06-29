@@ -1,13 +1,13 @@
 <?php
 
 // Register Custom Post Type
-    function post_type_posting() {
+    function post_type_projekt() {
 
         $labels = array(
-            'name'                  => _x( 'postings', 'Post Type General Name', 'mh' ),
-            'singular_name'         => _x( 'posting', 'Post Type Singular Name', 'mh' ),
-            'menu_name'             => __( 'Postings', 'mh' ),
-            'name_admin_bar'        => __( 'Post Type', 'mh' ),
+            'name'                  => _x( 'Projekte', 'Post Type General Name', 'mh' ),
+            'singular_name'         => _x( 'Projekt', 'Post Type Singular Name', 'mh' ),
+            'menu_name'             => __( 'Projekte', 'mh' ),
+            'name_admin_bar'        => __( 'Projekt Type', 'mh' ),
             'archives'              => __( 'Item Archives', 'mh' ),
             'attributes'            => __( 'Item Attributes', 'mh' ),
             'parent_item_colon'     => __( 'Parent Item:', 'mh' ),
@@ -33,7 +33,7 @@
             'filter_items_list'     => __( 'Filter items list', 'mh' ),
         );
         $args = array(
-            'label'                 => __( 'posting', 'mh' ),
+            'label'                 => __( 'projekt', 'mh' ),
             'description'           => __( 'single Artwork', 'mh' ),
             'labels'                => $labels,
             'supports'              => array( 'title', 'editor' ),
@@ -51,7 +51,7 @@
             'publicly_queryable'    => true,
             'capability_type'       => 'page',
         );
-        register_post_type( 'posting', $args );
+        register_post_type( 'projekt', $args );
 
     }
-    add_action( 'init', 'post_type_posting', 0 );   
+    add_action( 'init', 'post_type_projekt', 0 );   

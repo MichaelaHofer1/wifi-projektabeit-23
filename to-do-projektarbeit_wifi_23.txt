@@ -15,10 +15,10 @@ CSS:
 
 anderes:
 + CSS in SCSS umschreiben
++ 404-Seite erstellen
 + Galerie-Seite Lösung finden (!!! -> im Menü den Link ändern [momentan noch localhost]!!!)
 
 - Lightbox für Galerien
-- 404-Seite erstellen
 - Beiträge stylen und evtl. ein paar anlegen
 - Archive stylen und evtl. eines anlegen
 - Beitragsfunktion muss gestylt sein und funktionieren
