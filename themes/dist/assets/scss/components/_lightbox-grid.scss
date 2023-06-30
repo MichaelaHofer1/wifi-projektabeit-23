@@ -10,6 +10,10 @@
     right: 0;
     z-index: 1001;
     display: none;
+
+    &.select{
+        display: block;
+    }
 }
 
 .lightbox-container {
@@ -108,19 +112,15 @@
 
 
 
-.lightbox-button {
-    position: fixed;
-    top: 4%;
-    right: 5%;
-    z-index: 1002;
-}
 
-
-.lightbox-button-icon {
+#close-btn{
     position: relative;
     height: 40px;
     width: 40px;
-    display: none;
+    top: 2%;
+    right: 0;
+    margin-left: 95%;
+    display: block;
     &:hover {
         cursor: pointer;
     }
@@ -148,17 +148,6 @@
 
 
 
-
-
-input[id^='lightbox-toggle'] {
-    display: none;
-    &:checked ~ .lightbox,
-    &:checked ~ .lightbox-button {
-        display: block; 
-        .lightbox-button-icon {
-            display: block;
-        }
-
-    }    
+.closed {
+    
 }
-

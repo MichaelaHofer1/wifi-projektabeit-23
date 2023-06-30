@@ -1,8 +1,8 @@
-    /* Funktion zur Prüfung ob JS (dieses JS-File) geladen wurde
+/* Funktion zur Prüfung ob JS (dieses JS-File) geladen wurde
 -> Änder nder Klasse "no-js" in "js" im <html>-Tag
 */
 
-function jsLoaded () {
+function jsLoaded() {
     const htmlTag = document.querySelector('html')
     htmlTag.classList.remove('no-js')
     htmlTag.classList.add('js')
@@ -14,16 +14,16 @@ function jsLoaded () {
 /*
 ToTop-Button ein-/auszublenden
 */
-function showToTop(){
+function showToTop() {
     const toTopButton = document.getElementById('to-top')
-    if(window.scrollY > 250 ) {
+    if (window.scrollY > 250) {
         toTopButton.classList.add('show')
     } else {
         toTopButton.classList.remove('show')
     }
 }
 
-document.getElementById('to-top').addEventListener('click', function() {
+document.getElementById('to-top').addEventListener('click', function () {
     document.body.scrollTop = 0
     document.documentElement.scrollTop = 0
 })
@@ -40,7 +40,7 @@ function elementsInViewport() {
     let windowHeight = window.innerHeight || document.documentElement.clientHeight
     let windowBottom = windowTopPosition + windowHeight
 
-    for (let i = 0; i < elements.length; i++ ){
+    for (let i = 0; i < elements.length; i++) {
         let elementTopPosition = elements[i].getBoundingClientRect().top + windowTopPosition
         let elementBottomPosition = elements[i].getBoundingClientRect().bottom + windowTopPosition
 
@@ -52,7 +52,7 @@ function elementsInViewport() {
 
 
 function addAnimate() {
-    let addClassAnimate = document.querySelectorAll(' h2, h3, p, .column, img') 
+    let addClassAnimate = document.querySelectorAll(' h2, h3, p, .column, img')
 
     for (let i = 0; i < addClassAnimate.length; i++) {
         addClassAnimate[i].classList.add('animate')
@@ -72,10 +72,10 @@ function addAnimate() {
 
 
 
-function on (selector, eventType, cb) {
+function on(selector, eventType, cb) {
     document.addEventListener(eventType, (event) => {
         let element = event.target;
-    
+
         while (element) {
             if (element.matches(selector)) {
                 return cb({
@@ -83,38 +83,80 @@ function on (selector, eventType, cb) {
                     originalEvent: event
                 })
             }
-        element = element.parentElement;
+            element = element.parentElement;
         }
     })
 }
+
+window.addEventListener('load', function () {
+
+    on('.lightbox-small-boxes', 'click', function (event) {
+
+        const allImages = document.querySelectorAll('.select')
+        console.log(event)
+
+        for (const img of allImages) {
+
+            const imgClass = img.querySelectorAll('.lightbox-small-boxes')
+            const imgSelector = img.getAttribute('class')
+
+            if (imgSelector.match('detail-img-big')) {
+                img.classList.remove('detail-img-big')
+                img.classList.add('lightbox-small-boxes')
+            }
+
+            console.log()
+
+            if (allImages && imgClass) {
+                event.originalEvent.target.parentElement.classList.remove('lightbox-small-boxes')
+                event.originalEvent.target.parentElement.classList.add('detail-img-big')
+            }
+        }
+    })
+
+    on('.column', 'click', function (event) {
+
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.add('select');
+
+       let id = event.handleObj.getAttribute('data-id');
+        id = parseInt(id)
+
+        const sliderInitalize = function () {
+            var splide = new Splide('.splide-lightbox .splide', {
+                type: 'loop',
+                height: '400px',
+                width: '600px',
+                easing: 'linear',
+                pagination: false,
+                start: id
     
-
-
-on('.lightbox-small-boxes', 'click', function(event){
-
-    const allImages = document.querySelectorAll('.select')
-    console.log(event)
-
-    for (const img of allImages) {
-
-        const imgClass = img.querySelectorAll('.lightbox-small-boxes')
-        const imgSelector = img.getAttribute('class')
-
-        if (imgSelector.match('detail-img-big')) {
-            img.classList.remove('detail-img-big')
-            img.classList.add('lightbox-small-boxes')
+            });
+    
+            splide.mount();
+        }
+    
+        sliderInitalize();
+    
+        if (window.acf) {
+            window.acf.addAction('render_block_preview/type=carousel-auto', sliderInitalize)
         }
 
-        console.log()
 
-        if (allImages && imgClass) {
-            event.originalEvent.target.parentElement.classList.remove('lightbox-small-boxes')
-            event.originalEvent.target.parentElement.classList.add('detail-img-big')  
-        }
-    }
+    })
+
+
+    on('#close-btn', 'click', function(event){
+        
+        const close = document.getElementById('close-btn')      
+        event.originalEvent.target.parentElement.classList.remove('select')
+        
+    })
+
+
+
+
 })
-
-
 
 
 
@@ -168,21 +210,21 @@ on('.lightbox-small-boxes', 'click', function(event){
 
 
 // Event Listener "DOMContentLoaded" wird nur ausgeführt, wenn der DOM fertig aufgebaut ist
-document.addEventListener('DOMContentLoaded', function() { 
+document.addEventListener('DOMContentLoaded', function () {
     jsLoaded()
     showToTop()
     addAnimate()
     elementsInViewport()
 
-}, false )
+}, false)
 
 // Event Listner "scroll" wird immer beim Scrollen ausgeführt
-document.addEventListener('scroll', function() {
+document.addEventListener('scroll', function () {
     showToTop()
     elementsInViewport()
 })
 
-window.addEventListener('resize', function(){
+window.addEventListener('resize', function () {
     elementsInViewport()
 
 })
