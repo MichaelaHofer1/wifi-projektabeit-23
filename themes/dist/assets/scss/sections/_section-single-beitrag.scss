@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as *;
+
+.post {
+    background-color: #f4f4f4;
+    width: 85%;
+    padding: 1em;
+    margin: 1em auto;
+    border-bottom: 1px solid;
+    transition: translate 100ms ease-in-out;
+    a {
+        color: black;
+        &:hover {
+            color: black;
+        }
+    }
+    @media screen and (min-width: $tablet-breakpoint){
+        width: 65%;
+        display: flex;
+        align-items: center;
+    }
+    .post-title {
+        width: 70%;
+        &:hover {
+            transform: translateX(10px);
+        }
+    }
+    .meta {
+        display: flex;
+        flex-direction: column;
+        transition: translate 200ms ease-in-out;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+}

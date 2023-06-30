@@ -51,10 +51,6 @@ if($post_query->have_posts()): ?>
         $page_for_posts = get_option('page_for_posts');
         
         ?>
-
-        <div class="actions">
-            <a href="<?php the_permalink($page_for_posts); ?>" class="btn"><?php _e('All Posts', 'mh'); ?></a>
-        </div>
     </section>
 
 

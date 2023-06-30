@@ -4,7 +4,6 @@
         <h1 class="is-style-headline"><?php the_title(); ?></h1>
         <h2>das ist die single.php</h2>
         <div class="meta">
-            <time class="date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('d.m.Y'); ?></time>
             <?php 
                 the_category(', ');
             ?>
