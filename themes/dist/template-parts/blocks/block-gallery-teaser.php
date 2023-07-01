@@ -22,12 +22,25 @@
 
             <?php 
                 $images = $section_headline_sculptures['gallery'];
-                include(get_template_directory(  ) . '/template-parts/loops/teaser-gallery-loop.php'); 
-            ?>
+                    if( $images ): ?>
+                    <ul class="columns teaser">
+                    <?php foreach( $images as $image_id ): ?>
+                        <li class="column-home">
+                                <?php echo wp_get_attachment_image( $image_id, 'large' );?>
+                        </li>
+                    <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
                         
-            <div class="btn-container column">
-                <a href="<?php $section_headline_sculptures['btn-more'] ?>" class="btn-see-more"></a>
+            <div class="btn-container column-home">
+                <?php 
+                $link = $section_headline_sculptures['btn-more'];
+                    if( $link ): ?>
+                        <a class="btn-see-more" href="<?php echo esc_url( $link ); ?>"></a>
+                <?php endif; ?>
             </div>
+
+            
 
         </section>
 <?php 

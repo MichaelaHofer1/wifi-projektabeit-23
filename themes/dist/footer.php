@@ -13,16 +13,6 @@
             ));
         ?>
     </nav>
-
-
-  <!--      <div class="nav-footer">
-            <ul class="nav-menu">
-                <li><a href="#">Datenschutz</a></li>
-                <li><a href="#">Impressum</a></li>
-            </ul>
-        </div>
-        -->
-
         <div class="social-icons">
             <?php 
                 $social_links = get_field('social_links', 'options');
@@ -40,12 +30,7 @@
                     <span class="icon-instagram" aria-hidden="true"></span>
                     <span class="screen-reader-text">Follow on Instagram</span>
                 </a>
-            <?php endif; ?>
-
-
-
-           
-           
+            <?php endif; ?>        
         </div>
 
 

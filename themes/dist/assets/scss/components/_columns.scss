@@ -1,6 +1,7 @@
 @use "../abstracts/variables" as *;
 
-.column {
+.column,
+.column-home {
     max-height: 300px;
     overflow: hidden;
     &:hover {
@@ -53,7 +54,7 @@
 }
 
 
-li.column {
+li.column{
     margin: 0;
     position: relative;
     @media screen and (min-width: $tablet-breakpoint) {

@@ -15,14 +15,17 @@
         font-size: 1.2em; 
         margin-top: 1em;  
     }
-    > div {
-        padding: .7 0;
+    .copyright {
+        padding-top: 0.7em;
     }
 }
 
 
-.nav-footer {
+#nav-footer {
     text-align: center;
+    @media screen and (min-width: $desktop-breakpoint) {
+        text-align: left;
+    }
     .nav-menu li {
         @media screen and (min-width: $desktop-breakpoint) {
             padding-right: 1em;

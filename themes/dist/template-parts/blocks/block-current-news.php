@@ -31,11 +31,7 @@ if($project_query->have_posts()):
             <?php while($project_query->have_posts()): 
                 $project_query->the_post(); ?>
 
-
-
-
-
-                <article class="project">
+                <article class="project-cpt">
                     <div>
                         <h3 class="project-title">
                             <?php the_title(); ?>
@@ -48,35 +44,20 @@ if($project_query->have_posts()):
                         <p> 
                             <?php echo $currentNews['text']; ?> 
                         </p> 
+                    </div>                         
+                    <div class="news-pics">
+                        <?php echo wp_get_attachment_image( $currentNews['pictures'], 'large' );?>                                
                     </div>
-
-                            
-                        <?php $images = $currentNews['pictures']; ?>
-                            
-                        <ul class="news-pics">
-                            <?php foreach( $images as $image_id ): ?>
-                                <li class="news-pic">
-                                    <?php echo wp_get_attachment_image( $image_id, 'large' );?>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    
-                   
                 </article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <?php endwhile; ?>                
+            <?php endwhile; ?>   
+            
+            
+    
+    <div id="lightbox" class="lightbox">
+        <div id="close-btn"></div>
+        <div class="lightbox-news">
+            <?php echo wp_get_attachment_image($currentNews['pictures'], 'large' );?>
+        </div>  
 
     </section>
 

@@ -25,11 +25,17 @@
             <div class="about-me-image">
                 <?php echo wp_get_attachment_image($section_aboutme['aboutme-img'], 'large'); ?>
             </div>
-            <div class="btn-container-about-me column">
+            <div class="btn-container-about-me column-home">
                 <p>
                     <?php echo $section_aboutme['aboutme-text']; ?>    
                 </p>
-                <a href="#" class="btn-see-more"></a> 
+                
+
+                <?php
+                $link = $section_aboutme['btn-more'];
+                if( $link): ?>  
+                    <a href="<?php echo esc_url( $link ); ?>" class="btn-see-more"></a> 
+                <?php endif; ?>
             </div> 
                         
         </div>

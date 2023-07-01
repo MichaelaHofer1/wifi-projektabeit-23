@@ -119,7 +119,7 @@ window.addEventListener('load', function () {
         const lightbox = document.getElementById('lightbox');
         lightbox.classList.add('select');
 
-       let id = event.handleObj.getAttribute('data-id');
+        let id = event.handleObj.getAttribute('data-id');
         id = parseInt(id)
 
         const sliderInitalize = function () {
@@ -147,13 +147,28 @@ window.addEventListener('load', function () {
     })
 
 
+    //open lightbox for CPT auf Home    
+    on('.project-cpt', 'click', function (event) {
+
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.add('select');
+    })
+
+
+
+
+
+
+
+
+
+    //close lightbox (Gallerie und CPT)
     on('#close-btn', 'click', function(event){
         
         const close = document.getElementById('close-btn')      
         event.originalEvent.target.parentElement.classList.remove('select')
         
     })
-
 
 
 

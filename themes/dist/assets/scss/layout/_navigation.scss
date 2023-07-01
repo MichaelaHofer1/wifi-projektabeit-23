@@ -48,7 +48,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    padding: 3.5em 5%;
+    padding: 3.5em 35%;
     background: linear-gradient(0deg, $base-color 0%, $gradient-color3 100%);
     text-align: center;
     overflow-y: auto;
@@ -90,16 +90,7 @@
         > a {
             color: $contrast-color;
         }
-        &::before {
-            content: "";
-            display: block;
-            position: absolute;
-            height: 30px;
-            width: 2px;
-            background-color: $contrast-color;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+        /*
         &::after {
             content: "";
             display: block;
@@ -109,6 +100,19 @@
             background-color: $contrast-color;
             top: 50%;
             right: 0;
+            transform: translateY(-50%);
+        }
+        */
+    }
+    .current-menu-item {
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 30px;
+            width: 2px;
+            background-color: $contrast-color;
+            top: 50%;
             transform: translateY(-50%);
         }
     }
