@@ -15,60 +15,82 @@
 <?php if(!empty($images)): ?>
 
 
-<section  class="<?php echo $class_name; ?>">
-    <div class="columns">
+    <section  class="<?php echo $class_name; ?>">
+        <div class="columns">
 
 
-    <?php foreach($images['imgs-for-gallery'] as $image):?>
+        <?php $counter = 0; ?>
 
-        <?php $key = wp_generate_password(12, false, false); ?>
-        <div class="column">
-            <?php echo wp_get_attachment_image($image['big-img']); ?>
-            <div class="img-description">
-                <?php echo $image['short-description']; ?>
-            </div>
+        <?php foreach($images['imgs-for-gallery'] as $image):?>
+
+            <?php $key = wp_generate_password(12, false, false); ?>
+            <div class="column" data-id="<?php echo $counter;?>" id="image-<?php echo $counter; ?>">
+                <?php echo wp_get_attachment_image($image['big-img']); ?>
+                <div class="img-description">
+                    <?php echo $image['short-description']; ?>
+                </div>
+        </div>
+
+        <?php $counter ++; ?>
+        <?php endforeach; ?>
+
+
+        
+    
+    
+    <div id="lightbox" class="splide-lightbox lightbox">
+        
+    <div id="close-btn"></div>
+
+        <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                <?php foreach($images['imgs-for-gallery'] as $image):?> 
+                <li class="splide__slide">
+
+                        <div>
+                            <div class="lightbox-container ">
+                                <?php 
+                                    if ($image): 
+                                ?>
+                                <ul class="imgs-small">
+                                    <li class="detail-img-big select">
+                                        <?php echo wp_get_attachment_image($image['big-img'], 'large'); ?>
+                                    </li>
+                                    <?php $imageDetail = $image['details']?>
+                                    <?php foreach($imageDetail as $img): ?>
+                                        <li class="lightbox-small-boxes select">
+                                            <?php echo wp_get_attachment_image ($img['detail-imgs'], 'large'); ?>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                                <?php endif ?>              
+                                        
+                                <div class="description">
+                                    <p>
+                                        <?php echo $image['description']; ?>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                   
+
+
+                </li>
+                <?php endforeach; ?>
+
+            </ul>
+        </div> 
     </div>
 
-        <input type="checkbox" id="lightbox-toggle<?php echo $key; ?>">
-        <label for="lightbox-toggle<?php echo $key; ?>" class="lightbox-button">
-            <span class="lightbox-button-icon" aria-hidden="true"></span>
-            <span class="screen-reader-text"><?php _e('Lightbox öffnen/schließen', 'mh'); ?></span>
-        </label>
-    
-        <div class="lightbox">
-            <div class="lightbox-container">
-
-            <?php 
-                if ($image): 
-            ?>
-            <ul class="imgs-small">
-                <li class="detail-img-big select">
-                    <?php echo wp_get_attachment_image($image['big-img'], 'large'); ?>
-                </li>
-                <?php $imageDetail = $image['details']?>
-                <?php foreach($imageDetail as $img): ?>
-                    <li class="lightbox-small-boxes select">
-                        <?php echo wp_get_attachment_image ($img['detail-imgs'], 'large'); ?>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        <?php endif ?>
-        
-            <div class="description">
-                <p>
-                    <?php echo $image['description']; ?>
-                </p>
-            </div>
-    </div> 
-
     
 
-</div>
+    </div>
+      
+    </div>
 
-    <?php endforeach; ?>        
-                </div>
-
-</section>
+    </section>
 
 
    

@@ -3,11 +3,15 @@
 .column {
     max-height: 300px;
     overflow: hidden;
+    &:hover {
+        cursor: pointer;
+    }
     &:hover .img-description {
         @media screen and (min-width: $tablet-breakpoint){
             transform: translateY(0);
             opacity: 1;
             pointer-events: all;
+            cursor: pointer;
         }
     }
     img {
@@ -36,9 +40,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: translateY(-50px);
+        transform: translateY(-50%);
         max-height: 350px; 
         padding-bottom: 50px;
+        overflow: visible;
         
     @media  screen and (min-width: $tablet-breakpoint) {
         transform: translateY(-100px);        

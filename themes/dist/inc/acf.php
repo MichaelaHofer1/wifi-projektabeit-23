@@ -117,7 +117,12 @@ if(function_exists('acf_register_block_type')){
         'align' => false,
         'mode' => false,
         'icon' =>'welcome-widgets-menus',
-        'render_template' => 'template-parts/blocks/block-gallery.php'
+        'render_template' => 'template-parts/blocks/block-gallery.php',
+        'enqueue_assets' => function(){
+            wp_enqueue_style('splideCss', get_template_directory_uri() . '/assets/css/splide.min.css');
+            wp_enqueue_script('splideMain', get_template_directory_uri() . '/assets/js/splide.min.js');
+            wp_enqueue_script('splideConfig', get_template_directory_uri() . '/assets/js/splideConfigLightbox.js');
+        }
      ));
 }
 

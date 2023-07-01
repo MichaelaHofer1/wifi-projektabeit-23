@@ -52,7 +52,7 @@ function elementsInViewport() {
 
 
 function addAnimate() {
-    let addClassAnimate = document.querySelectorAll(' h2, h3, p, .column, img')
+    let addClassAnimate = document.querySelectorAll(' h2, h3, p')
 
     for (let i = 0; i < addClassAnimate.length; i++) {
         addClassAnimate[i].classList.add('animate')
@@ -125,9 +125,10 @@ window.addEventListener('load', function () {
         const sliderInitalize = function () {
             var splide = new Splide('.splide-lightbox .splide', {
                 type: 'loop',
-                height: '400px',
-                width: '600px',
-                easing: 'linear',
+                height: '95vh',
+                width: '90vw',
+                pagination: true,
+                easing: 'ease',
                 pagination: false,
                 start: id
     

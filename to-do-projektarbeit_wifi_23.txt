@@ -7,7 +7,8 @@ JS:
 
 
 CSS:
-- Galerie-Nav fixen
++ Galerie-Nav fixen
+
 - Kontakt-Nav fixen
 - Footer-Nav Schrift kleiner/schmäler
 - Nav-Leiste bei Scrollen kleiner werden
@@ -17,9 +18,9 @@ anderes:
 + CSS in SCSS umschreiben
 + 404-Seite erstellen
 + Galerie-Seite Lösung finden (!!! -> im Menü den Link ändern [momentan noch localhost]!!!)
++ Beiträge stylen und evtl. ein paar anlegen
++ Lightbox für Galerien
 
-- Lightbox für Galerien
-- Beiträge stylen und evtl. ein paar anlegen
 - Archive stylen und evtl. eines anlegen
 - Beitragsfunktion muss gestylt sein und funktionieren
 - Kontaktformular

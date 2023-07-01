@@ -26,7 +26,7 @@
             ?>
                         
             <div class="btn-container column">
-                <a href="#" class="btn-see-more"></a>
+                <a href="<?php $section_headline_sculptures['btn-more'] ?>" class="btn-see-more"></a>
             </div>
 
         </section>
