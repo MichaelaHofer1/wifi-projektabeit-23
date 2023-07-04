@@ -1,9 +1,20 @@
 <?php get_header(); ?>
 
     <main id="content" class="container">
-        <h1 class="is-style-headline"><?php the_title(); ?></h1>
-        <h2>das ist die single.php</h2>
+        <h1 class="is-style-headline headline-top"><?php the_title(); ?></h1>
         <div class="meta">
+            <p class="datum">
+                <?php
+                $datum = get_field('date-start-end');
+                ?>
+                <p>
+                    <?php
+                        echo $datum['duration-start'];
+                        echo $datum['bindestrich'];
+                        echo $datum['duration-end'];
+                    ?>
+                </p>
+            </p>
             <?php 
                 the_category(', ');
             ?>

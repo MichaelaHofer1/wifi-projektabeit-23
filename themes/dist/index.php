@@ -33,7 +33,6 @@
                         $datum = get_field('date-start-end');
                         ?>
                         <p>
-                            <?php the_field($datum['duration-start']); ?>
                             <?php echo $datum['duration-start']; ?>
                             <?php echo $datum['bindestrich']; ?>
                             <?php echo $datum['duration-end']; ?>
@@ -42,6 +41,9 @@
                         <div>
                             <?php the_category(', '); ?>
                         </div>
+                </div>
+                <div class="post-picture">
+                    <?php echo wp_get_attachment_image($datum['post-picture'], 'medium') ?>
                 </div>
             </article>
 

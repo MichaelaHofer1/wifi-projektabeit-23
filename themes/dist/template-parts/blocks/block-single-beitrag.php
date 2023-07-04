@@ -15,9 +15,7 @@
 <?php if(!empty($singleBeitrag)): ?>
 
         <section  class="<?php echo $class_name; ?>">
-            <p class="datum">
-                <?php echo $singleBeitrag['duration']; ?>
-            </p>
+
             <p>
                 <?php echo $singleBeitrag['description'];?>
             </p>
