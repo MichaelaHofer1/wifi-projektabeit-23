@@ -5,13 +5,15 @@ JS:
 + ein-faden von Content
 + To-Top Button
 
+- Lightbox groß/klein beim durchklicken korrigieren
+
 
 CSS:
 + Galerie-Nav fixen
 + Kontakt-Nav fixen
 + Footer-Nav Schrift kleiner/schmäler
 
-- Nav-Leiste bei Scrollen kleiner werden
+(- Nav-Leiste bei Scrollen kleiner werden)
 
 
 anderes:
@@ -21,9 +23,9 @@ anderes:
 + Beiträge stylen und evtl. ein paar anlegen
 + Lightbox für Galerien
 + Buttons auf Startseite
++ Beitragsfunktion muss gestylt sein und funktionieren
 
 - Archive stylen und evtl. eines anlegen
-- Beitragsfunktion muss gestylt sein und funktionieren
 - Kontaktformular
 - Impressum und Datenschutzseite erstellen
 - Bilder austauschen + beschriften

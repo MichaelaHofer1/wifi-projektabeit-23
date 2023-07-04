@@ -25,7 +25,7 @@
 
             <?php $key = wp_generate_password(12, false, false); ?>
             <div class="column" data-id="<?php echo $counter;?>" id="image-<?php echo $counter; ?>">
-                <?php echo wp_get_attachment_image($image['big-img']); ?>
+                <?php echo wp_get_attachment_image($image['big-img'], 'large'); ?>
                 <div class="img-description">
                     <?php echo $image['short-description']; ?>
                 </div>
@@ -60,7 +60,7 @@
                                     <?php $imageDetail = $image['details']?>
                                     <?php foreach($imageDetail as $img): ?>
                                         <li class="lightbox-small-boxes select">
-                                            <?php echo wp_get_attachment_image ($img['detail-imgs'], 'large'); ?>
+                                            <?php echo wp_get_attachment_image ($img['detail-imgs'], 'medium'); ?>
                                         </li>
                                     <?php endforeach; ?>
                                 </ul>

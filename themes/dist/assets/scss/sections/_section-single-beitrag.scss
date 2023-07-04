@@ -20,6 +20,8 @@
     }
     .post-title {
         width: 70%;
+        margin-top: 0;
+        padding-top: 1em;
         &:hover {
             transform: translateX(10px);
         }
@@ -30,6 +32,7 @@
         transition: translate 200ms ease-in-out;
         &:hover {
             text-decoration: underline;
+
         }
     }
 

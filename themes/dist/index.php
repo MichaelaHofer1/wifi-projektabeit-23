@@ -3,7 +3,7 @@
 ?>
 
 <main id="content" class="container">
-    <h1 class="is-style-headline">
+    <h1 class="is-style-headline headline-top">
         <?php
             $pagePosts = get_option('page_for_posts');
 
@@ -15,11 +15,11 @@
         ?>
     </h1>
 
-        
+
     <?php
 
-    if(have_posts()): 
-        while(have_posts()): 
+    if(have_posts()):
+        while(have_posts()):
             the_post(); ?>
 
             
@@ -30,10 +30,18 @@
                 <div class="meta">
                     
                     <?php 
+                        $datum = get_field('date-start-end');
+                        ?>
+                        <p>
+                            <?php the_field($datum['duration-start']); ?>
+                            <?php echo $datum['duration-start']; ?>
+                            <?php echo $datum['bindestrich']; ?>
+                            <?php echo $datum['duration-end']; ?>
+                        </p>
 
-                        the_category(', ');
-                    
-                    ?>
+                        <div>
+                            <?php the_category(', '); ?>
+                        </div>
                 </div>
             </article>
 
