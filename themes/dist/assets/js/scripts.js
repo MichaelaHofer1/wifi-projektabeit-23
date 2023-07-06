@@ -1,5 +1,5 @@
 /* Funktion zur Prüfung ob JS (dieses JS-File) geladen wurde
--> Änder nder Klasse "no-js" in "js" im <html>-Tag
+-> Ändern der Klasse "no-js" in "js" im <html>-Tag
 */
 
 function jsLoaded() {
@@ -16,12 +16,23 @@ ToTop-Button ein-/auszublenden
 */
 function showToTop() {
     const toTopButton = document.getElementById('to-top')
+    const navigation = document.getElementById('nav-bar')
+    const containerNav = document.getElementById('small-container')
+
     if (window.scrollY > 250) {
         toTopButton.classList.add('show')
+        navigation.classList.add('small-nav')
+        containerNav.classList.add('small-nav')
+
     } else {
         toTopButton.classList.remove('show')
+        navigation.classList.remove('small-nav')
+        containerNav.classList.remove('small-nav')
     }
 }
+
+
+
 
 document.getElementById('to-top').addEventListener('click', function () {
     document.body.scrollTop = 0

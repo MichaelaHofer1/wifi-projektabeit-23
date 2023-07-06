@@ -4,7 +4,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 
 gulp.task('css-style', () =>
-    gulp.src('./themes/dist/assets/scss/style.scss')
+    gulp.src('./themes/src/assets/scss/style.scss')
         .pipe(sass.sync({
             outputStyle: 'compressed'
         }).on('error', sass.logError))

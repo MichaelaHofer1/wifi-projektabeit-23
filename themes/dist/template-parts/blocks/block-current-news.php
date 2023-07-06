@@ -41,12 +41,23 @@ if($project_query->have_posts()):
                         $currentNews = get_field('news-project', get_the_ID());
 
                         if($currentNews) ?>             
-                        <p> 
-                            <?php echo $currentNews['text']; ?> 
-                        </p> 
+                        <div>
+                            <ul>
+                                <?php foreach($currentNews['text-list'] as $item): ?>
+                                    <li class="list">
+                                        <?php echo $item['text']; ?>
+                                    </li>
+                                <?php endforeach; ?>
+                                <?php foreach($currentNews['links'] as $item2): ?>
+                                    <li class="links">
+                                        <a href="<?php echo $item2['link']; ?> "  target="_blank"><?php echo $item2['link-text']; ?></a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
                     </div>                         
                     <div class="news-pics">
-                        <?php echo wp_get_attachment_image( $currentNews['pictures'], 'large' );?>                                
+                        <?php echo wp_get_attachment_image( $currentNews['pictures'], 'center-img' );?>
                     </div>
                 </article>
             <?php endwhile; ?>   

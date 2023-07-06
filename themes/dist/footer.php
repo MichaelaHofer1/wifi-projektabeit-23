@@ -28,9 +28,16 @@
             <?php if($social_links['instagram']): ?>
                 <a href="<?php echo $social_links['instagram']; ?>"  target="_blank">
                     <span class="icon-instagram" aria-hidden="true"></span>
-                    <span class="screen-reader-text">Follow on Instagram</span>
+                    <span class="screen-reader-text">Folge mir auf Instagram</span>
                 </a>
-            <?php endif; ?>        
+            <?php endif; ?>
+
+            <?php if($social_links['email']): ?>
+                <a href="<?php echo esc_url($social_links['email']); ?>" >
+                    <span class="icon-mail4" aria-hidden="true"></span>
+                    <span class="screen-reader-text">Sende eine Email</span>
+                </a>
+            <?php endif; ?>
         </div>
 
 

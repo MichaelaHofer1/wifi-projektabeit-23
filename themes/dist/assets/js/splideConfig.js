@@ -36,7 +36,7 @@ window.addEventListener( 'load', function() {
 
       
       const sliderInitalize = function (){
-        var splide = new Splide( '#header-slideshow-img-container', {
+        let splide = new Splide( '#header-slideshow-img-container', {
           type: 'loop',
           easing: 'ease',
           autoplay: 'true',

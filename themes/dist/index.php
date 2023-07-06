@@ -35,7 +35,7 @@
                         <p>
                             <?php echo $datum['duration-start']; ?>
                             <?php echo $datum['bindestrich']; ?>
-                            <?php echo $datum['duration-end']; ?>
+                            <?php echo $datum['duration_end']; ?>
                         </p>
 
                         <div>

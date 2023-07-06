@@ -5,3 +5,4 @@ add_filter('upload_mimes', function($mimes = array()){
         return $mimes;
     });
 
+add_image_size( 'center-img', 'large', 'large',  'center center'  );

@@ -55,12 +55,12 @@
                                 ?>
                                 <ul class="imgs-small">
                                     <li class="detail-img-big select">
-                                        <?php echo wp_get_attachment_image($image['big-img'], 'large'); ?>
+                                        <?php echo wp_get_attachment_image($image['big-img'], 'center-img'); ?>
                                     </li>
                                     <?php $imageDetail = $image['details']?>
                                     <?php foreach($imageDetail as $img): ?>
                                         <li class="lightbox-small-boxes select">
-                                            <?php echo wp_get_attachment_image ($img['detail-imgs'], 'medium'); ?>
+                                            <?php echo wp_get_attachment_image ($img['detail-imgs'], 'center-img'); ?>
                                         </li>
                                     <?php endforeach; ?>
                                 </ul>

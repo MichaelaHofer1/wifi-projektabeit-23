@@ -9,7 +9,7 @@
 <body <?php body_class( ); ?>>
     <a href="#content" class="screen-reader-text"><?php _e('Zum Inhalt springen', 'wifi') ?></a>
     <nav id="nav-bar">
-        <div class="container">
+        <div class="container" id="small-container">
             <div id="brand">
                 
                 <?php 
