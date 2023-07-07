@@ -41,7 +41,7 @@ window.addEventListener( 'load', function() {
           easing: 'ease',
           autoplay: 'true',
           perPage: 1,
-          interval: '5000',
+          interval: '3000',
           speed: '750',
           pagination: false, 
           arrows: false

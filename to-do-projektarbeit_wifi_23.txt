@@ -2,41 +2,16 @@
 TO-DO PROJEKTARBEIT:	
 
 JS:
-+ ein-faden von Content
-+ To-Top Button
-
 - Lightbox groß/klein beim durchklicken korrigieren
-- news lightbox geht auf wenn auf Link geklickt -> beheben!
+- Bilder im single-post: sollen kein Hover haben und in der Lightbox mittig angezeigt werden (keine kleinen Bilder)
 
 
 CSS:
-+ Galerie-Nav fixen
-+ Kontakt-Nav fixen
-+ Footer-Nav Schrift kleiner/schmäler
-+ Nav-Leiste bei Scrollen kleiner werden
 
 
 anderes:
-+ CSS in SCSS umschreiben
-+ 404-Seite erstellen
-+ Galerie-Seite Lösung finden (!!! -> im Menü den Link ändern [momentan noch localhost]!!!)
-+ Beiträge stylen und evtl. ein paar anlegen
-+ Lightbox für Galerien
-+ Buttons auf Startseite
-+ Beitragsfunktion muss gestylt sein und funktionieren
-+ Impressum und Datenschutzseite erstellen
-+ Archive stylen und evtl. eines anlegen
-+ galerie-bilder mittig positionieren
-+ Kontaktformular
-
 - Bilder austauschen + beschriften
 - Texte schreiben + einfügen
-- email icon im Footer
-- footer manchmal nicht bis Ende der Seite
-- splide skulpturenseite zu hoch
-- sub-menu bei Nav wird beim Scrollen noch nicht nach oben verschoben
+- email icon im Footer (?)
 - single-post: Enddatum wird nicht angezeigt
-- single-post: Link umstylen
-- news: liste ein bisschen nach rechts rücken
-- news: Bild contain nicht cover
-- nav bei mobile: subnav mittig stylen
+- Skulpturen Seite Lightbox funktioniert nicht

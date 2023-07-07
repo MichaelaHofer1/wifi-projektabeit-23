@@ -138,7 +138,6 @@ window.addEventListener('load', function () {
                 type: 'loop',
                 height: '95vh',
                 width: '90vw',
-                pagination: true,
                 easing: 'ease',
                 pagination: false,
                 start: id
@@ -159,7 +158,7 @@ window.addEventListener('load', function () {
 
 
     //open lightbox for CPT auf Home    
-    on('.project-cpt', 'click', function (event) {
+    on('.news-pics', 'click', function () {
 
         const lightbox = document.getElementById('lightbox');
         lightbox.classList.add('select');
@@ -173,10 +172,10 @@ window.addEventListener('load', function () {
 
 
 
-    //close lightbox (Gallerie und CPT)
+    //close lightbox (Galerie und CPT)
     on('#close-btn', 'click', function(event){
         
-        const close = document.getElementById('close-btn')      
+        //const close = document.getElementById('close-btn')
         event.originalEvent.target.parentElement.classList.remove('select')
         
     })

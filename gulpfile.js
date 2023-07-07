@@ -13,7 +13,7 @@ gulp.task('css-style', () =>
 );
 
 gulp.task('watch', () =>
-        gulp.watch('./themes/dist/assets/scss/**/*.scss', gulp.series('css-style'))
+        gulp.watch('./themes/src/assets/scss/**/*.scss', gulp.series('css-style'))
 );
 
 gulp.task('development', gulp.series('watch'));
