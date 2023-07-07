@@ -1,0 +1,124 @@
+@use "../abstracts/variables" as *;
+
+
+.header-text,
+#header-slideshow-img-container{
+    height: calc( (100vh - 30px) / 2);
+
+    @media screen and (min-width: $desktop-breakpoint) {
+            height: calc(100vh - $navbar-height-desktop);
+    }    
+}
+
+
+
+
+
+
+.header-text {
+    background-color: $third-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    line-height: 1.2;
+    letter-spacing: 8px;
+    font-weight: 400;
+    z-index: 100;
+
+    .profession {
+        display: block;
+        padding-top: .8em;
+        font-size: 1.2rem;
+        line-height: 1.4;
+        letter-spacing: 2px;
+        font-weight: 200;
+        &.part2 {
+            padding: 0;
+        }
+
+        @media screen and (min-width: $desktop-breakpoint) {
+                font-size: 1.4rem;
+                letter-spacing: 4px;
+                display: inline;
+        }
+    }
+
+    @media screen and (min-width: $desktop-breakpoint) {
+        width: 40%;
+        font-size: 2rem;
+        line-height: 1.4;
+        letter-spacing: 18px;
+        padding: 0 1rem;
+        border-bottom: 1px solid rgb(222, 222, 222); 
+        h1 {
+            transform: translateX(20%);
+        }
+        .last-name {
+            display: block;
+        }
+        .profession.part1,
+        .profession.part2 {
+            padding: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+#header-slideshow-img-container {
+    img {
+        object-fit: cover;
+        height: calc((100vh - $navbar-height-mobile) / 2);
+        width: 100vw;
+        filter: grayscale(100%);
+        @media screen and (min-width: $desktop-breakpoint) {
+            height: calc(100vh - $navbar-height-desktop);
+        }
+    }
+    
+    @media screen and (min-width: $desktop-breakpoint) {
+        width: 60%;
+        height: calc(100vh - $navbar-height-desktop);
+
+    }
+}
+
+
+
+.header-content {
+    padding-bottom: 3em;
+
+    @media screen and (min-width: $desktop-breakpoint) {
+        min-height: calc(100vh - 100px);
+        display: flex;
+        &::after {
+            content: "";
+            display: block;
+            top: $navbar-height-desktop;
+            left: 40%;
+            position: absolute; width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: calc(100vh - $navbar-height-desktop) 300px 0 0;
+            border-color: $third-color transparent transparent;
+            z-index: 99;            
+        }
+    }
+
+    @media screen and (min-width: $tablet-breakpoint) {
+        padding-bottom: 8em;
+    }
+
+}
+
+

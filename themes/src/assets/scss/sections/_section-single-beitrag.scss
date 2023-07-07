@@ -1,0 +1,56 @@
+@use "../abstracts/variables" as *;
+
+.post {
+    background-color: #f4f4f4;
+    padding: 5%;
+    margin: 1em auto;
+    border-bottom: 1px solid;
+    transition: translate 50ms ease-in-out;
+    max-width: 1000px;
+    a {
+        color: black;
+        &:hover {
+            color: #6b6b6b;
+            text-decoration: underline;
+        }
+    }
+    @media screen and (min-width: $tablet-breakpoint){
+        display: flex;
+        align-items: center;
+    }
+    .post-title {
+        width: 70%;
+        margin-top: 0;
+        padding-top: 1em;
+        &:hover {
+            transform: translateX(10px);
+        }
+    }
+    .meta {
+        display: flex;
+        flex-direction: column;
+        transition: translate 200ms ease-in-out;
+        padding: 0 1em 1em 0;
+        @media screen and (min-width: $tablet-breakpoint){
+            padding-left: 1em;
+        }
+    }
+
+    .post-picture {
+        border-radius: 5px;
+    }
+
+}
+
+.posts{
+    padding: 0 5%;
+}
+
+#content .meta a {
+    text-decoration: underline;
+    text-decoration-color: $gradient-color2;
+    transition: color 100ms linear;
+    &:hover {
+        color: $gradient-color2;
+    }
+}

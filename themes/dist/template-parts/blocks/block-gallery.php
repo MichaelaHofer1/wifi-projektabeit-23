@@ -23,7 +23,7 @@
 
         <?php foreach($images['imgs-for-gallery'] as $image):?>
 
-            <?php $key = wp_generate_password(12, false, false); ?>
+
             <div class="column" data-id="<?php echo $counter;?>" id="image-<?php echo $counter; ?>">
                 <?php echo wp_get_attachment_image($image['big-img'], 'large'); ?>
                 <div class="img-description">

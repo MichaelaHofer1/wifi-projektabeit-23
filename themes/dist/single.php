@@ -14,7 +14,6 @@
                         echo $datum['duration-end'];
                     ?>
                 </p>
-            </p>
             <?php 
                 the_category(', ');
             ?>

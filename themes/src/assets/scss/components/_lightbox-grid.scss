@@ -1,0 +1,120 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.lightbox {
+    background: #000000d9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1001;
+    display: none;
+
+    &.select{
+        display: block;
+    }
+}
+
+.lightbox-container {
+    position: absolute;
+    top: 0;
+    bottom: 5%;
+    right: 5%;
+    left: 5%;
+    background-color: white;
+    max-height: 100vh;
+    display: grid;
+    grid-template-rows: 70% 1fr 1fr;
+    @media screen and (min-width: $tablet-breakpoint) {
+        display: grid;
+        grid-template-rows: 70% 30%;
+        grid-template-columns: 70% 30%;
+    }
+    .imgs-small {
+        display: flex;
+        justify-content: center;
+        gap: 2px;
+        grid-area: 2/1;
+        padding-top: 1em;
+        @media screen and (min-width: $small-tablet-breakpoint) {
+            padding: 0 1em;
+        }
+        @media screen and (min-width: $tablet-breakpoint) {
+            grid-area: 2/2;
+            flex-wrap: wrap;
+            justify-content: start;
+        }
+        .lightbox-small-boxes {
+            max-height: 60px;
+            width: calc(100% / 3);
+        }
+        img {
+            @include imgCover;
+        }
+    }
+    .detail-img-big,
+    .active {
+        height: 60vh;
+        width: 100%;
+        text-align: center;
+        padding-top: 1em;
+        img {
+            height: 100%;
+            object-fit: contain;
+            width: auto;
+            @media screen and (min-width: $tablet-breakpoint) {
+                width: 100%;
+            }
+        }        
+        @media screen and (min-width: $tablet-breakpoint) {
+            text-align: start;
+            padding: 1em;
+            padding-right: 0;
+            height: 100%;    
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70%;
+        }
+    }
+    .description { 
+        padding: 1em;
+        grid-area: 3;
+        @media screen and (min-width: $tablet-breakpoint) {
+            grid-area: 1/2; 
+        }
+    }    
+}
+
+
+.detail-img-big,
+.active {    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    padding: 1em;
+    @media screen and (min-width: $tablet-breakpoint) {
+        padding-right: 0;
+    }
+    img {
+        object-fit: contain;
+        height: 100%;
+        width: auto;
+        margin: 0 auto;
+        @media screen and (min-width: $tablet-breakpoint) {
+            width: 100%;
+        }
+    }  
+}
+
+
+
+
+
+
+#lightbox .splide {
+    margin: 0 auto;
+}

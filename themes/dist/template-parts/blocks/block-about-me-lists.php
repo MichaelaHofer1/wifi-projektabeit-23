@@ -1,5 +1,5 @@
 <?php
-    $class_name = '';
+    $class_name = 'list';
 
     if(!empty($block['className'])){
         $class_name .= ' ' . esc_attr($block['className']);

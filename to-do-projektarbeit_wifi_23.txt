@@ -12,6 +12,7 @@ CSS:
 anderes:
 - Bilder austauschen + beschriften
 - Texte schreiben + einfügen
-- email icon im Footer (?)
+
 - single-post: Enddatum wird nicht angezeigt
 - Skulpturen Seite Lightbox funktioniert nicht
+-block lightbox löschen
