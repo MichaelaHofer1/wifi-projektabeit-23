@@ -1,3 +1,4 @@
+<!-- Wiederholungs-Textfelder, eine Überschrift und jeder Eintrag ein neues Listenelement -->
 <?php
     $class_name = 'list';
 

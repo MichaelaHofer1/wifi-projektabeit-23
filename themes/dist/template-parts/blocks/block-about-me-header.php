@@ -1,3 +1,4 @@
+<!-- about-me Seite, Überschrift und Profilbild -->
 <?php
     $class_name = '';
 

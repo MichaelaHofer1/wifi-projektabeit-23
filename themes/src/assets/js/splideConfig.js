@@ -1,28 +1,26 @@
-"use strict"
 import Splide from '@splidejs/splide';
-window.addEventListener( 'load', function() {
+"use strict"
+document.addEventListener( 'DOMContentLoaded', function() {
     
 
   
-    const sliderInitalize = function (){
+    const sliderInitalizeFastSlideshow = function (){
       var splide = new Splide( '#splide-sculptures', {
         type: 'loop',
-        height: '400px',
-        width: '600px',
         easing: 'linear',
         autoplay: 'true',
-        speed: 'number = 100',
+        speed: 'number = 500',
         interval: '750',
         pauseOnHover: 'true',
-        pagination: false, 
+        pagination: true,
       } );
       splide.mount();
     }
 
-    sliderInitalize();
+    sliderInitalizeFastSlideshow();
 
     if(window.acf){
-        window.acf.addAction('render_block_preview/type=carousel-auto', sliderInitalize)
+        window.acf.addAction('render_block_preview/type=carousel-auto', sliderInitalizeFastSlideshow())
     }
 
 
@@ -32,10 +30,10 @@ window.addEventListener( 'load', function() {
 
 
 
-window.addEventListener( 'load', function() {       
+document.addEventListener( 'DOMContentLoaded', function() {
 
       
-      const sliderInitalize = function (){
+      const sliderInitalizeSlideshow = function (){
         let splide = new Splide( '#header-slideshow-img-container', {
           type: 'loop',
           easing: 'ease',
@@ -49,10 +47,10 @@ window.addEventListener( 'load', function() {
         splide.mount();
       };
 
-      sliderInitalize();
+    sliderInitalizeSlideshow();
 
       if(window.acf){
-          window.acf.addAction('render_block_preview/type=header', sliderInitalize)
+          window.acf.addAction('render_block_preview/type=header', sliderInitalizeSlideshow)
       }
 
 

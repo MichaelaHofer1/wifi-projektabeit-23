@@ -1,3 +1,4 @@
+import Splide from '@splidejs/splide';
 
 function on(selector, eventType, cb) {
     document.addEventListener(eventType, (event) => {
@@ -14,31 +15,11 @@ function on(selector, eventType, cb) {
     })
 }
 
-window.addEventListener('load', function () {
 
-    on('.lightbox-small-boxes', 'click', function (event) {
 
-        const allImages = document.querySelectorAll('.is-active .select')
-        console.log(event)
+document.addEventListener('DOMContentLoaded', function () {
 
-        for (const img of allImages) {
 
-            const imgClass = img.querySelectorAll('.is-active .lightbox-small-boxes')
-            const imgSelector = img.getAttribute('class')
-
-            if (imgSelector.match('detail-img-big')) {
-                img.classList.remove('detail-img-big')
-                img.classList.add('lightbox-small-boxes')
-            }
-
-            console.log()
-
-            if (allImages && imgClass) {
-                event.originalEvent.target.parentElement.classList.remove('lightbox-small-boxes')
-                event.originalEvent.target.parentElement.classList.add('detail-img-big')
-            }
-        }
-    })
 
     on('.column', 'click', function (event) {
 
@@ -48,7 +29,7 @@ window.addEventListener('load', function () {
         let id = event.handleObj.getAttribute('data-id');
         id = parseInt(id)
 
-        const sliderInitalize = function () {
+        const sliderLightboxGallery = function () {
             var splide = new Splide('.splide-lightbox .splide', {
                 type: 'loop', height: '95vh', width: '90vw', easing: 'ease', pagination: false, start: id
 
@@ -57,10 +38,10 @@ window.addEventListener('load', function () {
             splide.mount();
         }
 
-        sliderInitalize();
+        sliderLightboxGallery();
 
         if (window.acf) {
-            window.acf.addAction('render_block_preview/type=carousel-auto', sliderInitalize)
+            window.acf.addAction('render_block_preview/type=carousel-auto', sliderLightboxGallery)
         }
 
 
@@ -75,5 +56,28 @@ window.addEventListener('load', function () {
 
     })
 
+    on('.is-active .lightbox-small-boxes', 'click', function (event) {
+
+            const allImages = document.querySelectorAll('.is-active.splide__slide .select')
+            console.log(allImages)
+
+            for (const img of allImages) {
+
+                const imgClass = img.querySelectorAll('.is-active .lightbox-small-boxes')
+                const imgSelector = img.getAttribute('class')
+
+                if (imgSelector.match('detail-img-big')) {
+                    img.classList.remove('detail-img-big')
+                    img.classList.add('lightbox-small-boxes')
+                }
+
+                console.log()
+
+                if (allImages && imgClass) {
+                    event.originalEvent.target.parentElement.classList.remove('lightbox-small-boxes')
+                    event.originalEvent.target.parentElement.classList.add('detail-img-big')
+                }
+            }
+        })
 
 })

@@ -1,3 +1,4 @@
+<!--  gibt den CPT-Post aus, Überschrift, Bild, Text, Links, + klick auf Bild -> Lightbox -->
 <?php
 
 $class_name = '';

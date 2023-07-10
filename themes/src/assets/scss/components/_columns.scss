@@ -29,6 +29,7 @@
         object-fit: cover;
         width: 300px;
         height: 300px;
+        object-position: 50% 80%;
     }
     @media screen and (min-width: $tablet-breakpoint) {
         position: relative;

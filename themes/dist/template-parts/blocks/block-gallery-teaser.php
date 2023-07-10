@@ -1,3 +1,4 @@
+<!--  Home-Seite, Teaser für die Skulpturen- und Scherenschnittseite (Überschrift, Bilder, Button) -->
 <?php
     $class_name = '';
 

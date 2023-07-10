@@ -1,3 +1,4 @@
+<!--  Home-Seite, Header (Titel, Slideshow) -->
 <?php
 
 $anchor = '';

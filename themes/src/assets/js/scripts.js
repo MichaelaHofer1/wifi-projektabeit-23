@@ -89,7 +89,7 @@ function on(selector, eventType, cb) {
     })
 }
 
-window.addEventListener('load', function () {
+document.addEventListener('DOMContentLoaded', function () {
 
     //open lightbox for CPT auf Home
     on('.news-pics', 'click', function () {

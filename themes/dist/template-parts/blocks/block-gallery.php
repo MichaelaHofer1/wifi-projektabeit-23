@@ -1,3 +1,4 @@
+<!-- Block für die Galerien, Wiederholungsfelder, je ein großes Bild und x kleine Bilder + lightbox -->
 <?php
     $class_name = 'container';
 

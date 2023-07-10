@@ -1,3 +1,5 @@
+<!--  Vorschau von den Beiträgen, kann im ACF Anzahl der ausgegebenen Beiträge definieren,
+gibt Titel, Datum, Kategorie aus -->
 <?php
 
     $anchor = '';
@@ -36,7 +38,7 @@ if($post_query->have_posts()): ?>
                 </h2>
                 <div class="meta">
                     <time class="date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('d.m.Y'); ?></time>
-                    <?php 
+                    <?php
 
                         the_category(', ');
                     

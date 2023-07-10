@@ -26,10 +26,12 @@
     max-height: 100vh;
     display: grid;
     grid-template-rows: 70% 1fr 1fr;
+    overflow: scroll;
     @media screen and (min-width: $tablet-breakpoint) {
         display: grid;
         grid-template-rows: 70% 30%;
         grid-template-columns: 70% 30%;
+        overflow: hidden;
     }
     .imgs-small {
         display: flex;
@@ -82,7 +84,8 @@
         padding: 1em;
         grid-area: 3;
         @media screen and (min-width: $tablet-breakpoint) {
-            grid-area: 1/2; 
+            grid-area: 1/2;
+            overflow: scroll;
         }
     }    
 }

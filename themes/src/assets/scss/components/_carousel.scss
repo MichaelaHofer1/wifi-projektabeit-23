@@ -3,7 +3,12 @@
 .carousel-container {
     position: relative;
     padding-bottom: .5em;
-    margin-bottom: 0;
+    height: 400px;
+    width: 100vw ;
+    margin: 0 auto;
+    @media screen and (min-width: $small-tablet-breakpoint) {
+        width: 600px;
+    }
     img {
         position: absolute;
         width: 100%;
@@ -18,8 +23,16 @@
         right: 0;
         text-align: center;
     }
+    .splide__slide {
+        width: 100%;
+    }
 }
 section#splide-sculptures {
     margin-bottom: 10em;
-    padding-bottom: 1em;
+    visibility: visible;
+    height: 400px;
+    width: 100vw;
+    @media screen and (min-width: $small-tablet-breakpoint) {
+        width: 600px ;
+    }
 }

@@ -4,9 +4,12 @@
 
 .sculptures-page {
     > p {
-        padding-bottom: 100px;
-        width: 50%;
+        padding-bottom: 10em;
+        width: 85%;
         margin: 0 auto;
+        @media screen and (min-width: $small-tablet-breakpoint) {
+            width: 50%;
+        }
     }
     > h2 {
         padding-top: 50px;   

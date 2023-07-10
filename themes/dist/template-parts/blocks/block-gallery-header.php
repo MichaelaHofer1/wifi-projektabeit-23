@@ -1,3 +1,4 @@
+<!--  Überschrift + Text -->
 <?php
     $class_name = 'sculptures-page';
 
