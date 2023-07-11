@@ -31,10 +31,7 @@
 }
 
 .btn-container-about-me {
-    display: flex;
-    flex-direction: column;
     gap: 10px;
-    align-items: center;
     max-width: 400px;
     @media screen and (min-width: $tablet-breakpoint) {
         margin-top: 3em;
@@ -42,7 +39,7 @@
     &.colum::after {
         display: none;
     }
-    p {  
+    p {
         @media screen and (min-width: $desktop-breakpoint) {
             padding-top: 50px;
         }
@@ -52,6 +49,7 @@
 .about-me {
     @media screen and (min-width: $desktop-breakpoint) {
         position: relative;
+        z-index: -1;
         max-height: 600px;
         .columns {
             padding: 100px 20% 0;
@@ -70,7 +68,7 @@
         }
         .btn-see-more {
             transform: scale(.5) translateY(-50%) ;
-            margin: 0;
+            margin: 0 auto;
             &::before,
             &::after {
                 height: 2px;

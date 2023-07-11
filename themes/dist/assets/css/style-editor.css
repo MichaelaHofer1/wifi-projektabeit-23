@@ -8,6 +8,7 @@ Text Domain: mh
 .btn-see-more {
   height: 100px;
   width: 100px;
+  margin: 0 auto;
   border: 1px solid black;
   border-radius: 50px;
   position: relative;
@@ -60,6 +61,7 @@ Text Domain: mh
   -webkit-transform: translateY(0%);
       -ms-transform: translateY(0%);
           transform: translateY(0%);
+  display: block;
 }
 
 #to-top {
@@ -1399,17 +1401,7 @@ ul .list {
 }
 
 .btn-container-about-me {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   max-width: 400px;
 }
 @media screen and (min-width: 800px) {
@@ -1429,6 +1421,7 @@ ul .list {
 @media screen and (min-width: 1200px) {
   .about-me {
     position: relative;
+    z-index: -1;
     max-height: 600px;
   }
   .about-me .columns {
@@ -1459,7 +1452,7 @@ ul .list {
     -webkit-transform: scale(0.5) translateY(-50%);
         -ms-transform: scale(0.5) translateY(-50%);
             transform: scale(0.5) translateY(-50%);
-    margin: 0;
+    margin: 0 auto;
   }
   .about-me .btn-see-more::before, .about-me .btn-see-more::after {
     height: 2px;

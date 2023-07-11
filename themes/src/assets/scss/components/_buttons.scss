@@ -5,6 +5,7 @@
 .btn-see-more {
     height: 100px;
     width: 100px;
+    margin: 0 auto;
     border: 1px solid black;
     border-radius: calc(100px / 2);
     position: relative;
@@ -42,6 +43,7 @@
 
 .about-me .btn-see-more {
     transform: translateY(0%);
+    display: block;
 }
     
 
