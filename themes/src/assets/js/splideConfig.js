@@ -1,9 +1,8 @@
 import Splide from '@splidejs/splide';
-"use strict"
 document.addEventListener( 'DOMContentLoaded', function() {
-    
 
-  
+
+
     const sliderInitalizeFastSlideshow = function (){
       var splide = new Splide( '#splide-sculptures', {
         type: 'loop',
@@ -32,7 +31,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 document.addEventListener( 'DOMContentLoaded', function() {
 
-      
+
       const sliderInitalizeSlideshow = function (){
         let splide = new Splide( '#header-slideshow-img-container', {
           type: 'loop',
@@ -41,7 +40,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
           perPage: 1,
           interval: '3000',
           speed: '750',
-          pagination: false, 
+          pagination: false,
           arrows: false
         } );
         splide.mount();

@@ -1,0 +1,27 @@
+@use "../abstracts/variables" as *;
+
+
+.links {
+  padding-top: .5em;
+
+  &:hover {
+    color: #6b6b6b;
+  }
+
+  a:hover {
+    color: #6b6b6b;
+  }
+
+}
+
+
+.project-cpt .links {
+  text-decoration: underline;
+  text-decoration-color: #6b6b6b;
+
+}
+
+.project-cpt .links:first-child {
+  padding-top: 1.5em;
+}
+

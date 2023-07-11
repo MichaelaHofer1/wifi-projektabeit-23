@@ -72,19 +72,3 @@
     }
 }
 
-
-.links {
-    padding-top: .5em;
-    text-decoration: underline;
-    text-decoration-color: #6b6b6b;
-    &:hover {
-        color: #6b6b6b;
-    }
-    a:hover {
-        color: #6b6b6b;
-    }
-}
-
-.links:first-child {
-    padding-top: 1.5em;
-}

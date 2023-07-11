@@ -218,22 +218,22 @@ if(function_exists('acf_register_block_type')){
 }
 
 
-if(function_exists('acf_register_block_type')){
+    if(function_exists('acf_register_block_type')){
 
-    acf_register_block_type(array(
-        'name' => 'Beitrag',
-        'title' => __('Beitrag', 'mh'),
-        'description' => __('Das ist der Beitrag', 'mh'),
-        'supports' => array('anchor' => false), 
-        'category' => 'mh',
-        'keywords' => array('post', 'mh', 'beitrag'),
-        'post_type' => array('page'),
-        'align' => false,
-        'mode' => false,
-        'icon' =>'welcome-widgets-menus',
-        'render_template' => 'template-parts/blocks/block-single-beitrag.php'
-     ));
-}
+        acf_register_block_type(array(
+            'name' => 'Link',
+            'title' => __('Link', 'mh'),
+            'description' => __('Das ist ein Link', 'mh'),
+            'supports' => array('anchor' => false),
+            'category' => 'mh',
+            'keywords' => array('post', 'mh', 'link'),
+            'post_type' => array('page'),
+            'align' => false,
+            'mode' => false,
+            'icon' =>'welcome-widgets-menus',
+            'render_template' => 'template-parts/blocks/block-link.php'
+        ));
+    }
 
 
 if(function_exists('acf_register_block_type')){

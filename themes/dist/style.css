@@ -231,6 +231,10 @@ section#splide-sculptures {
           transform: translateY(-100%);
   line-height: 1.4;
 }
+.column a:hover,
+.column-home a:hover {
+  cursor: pointer;
+}
 .column:hover,
 .column-home:hover {
   cursor: pointer;
@@ -287,6 +291,8 @@ section#splide-sculptures {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 200px;
+  margin: 3em auto 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -354,6 +360,10 @@ li.column {
   .columns {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+.teaser ~ .column-home:hover {
+  cursor: default;
 }
 
 .lightbox {
@@ -557,6 +567,25 @@ li.column {
      object-fit: cover;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
+}
+
+.links {
+  padding-top: 0.5em;
+}
+.links:hover {
+  color: #6b6b6b;
+}
+.links a:hover {
+  color: #6b6b6b;
+}
+
+.project-cpt .links {
+  text-decoration: underline;
+  text-decoration-color: #6b6b6b;
+}
+
+.project-cpt .links:first-child {
+  padding-top: 1.5em;
 }
 
 .lightbox-news {
@@ -1658,22 +1687,6 @@ form#wpforms-form-446 {
 }
 .news-pics:hover {
   cursor: pointer;
-}
-
-.links {
-  padding-top: 0.5em;
-  text-decoration: underline;
-  text-decoration-color: #6b6b6b;
-}
-.links:hover {
-  color: #6b6b6b;
-}
-.links a:hover {
-  color: #6b6b6b;
-}
-
-.links:first-child {
-  padding-top: 1.5em;
 }
 
 .post {

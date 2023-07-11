@@ -13,9 +13,12 @@
         transform: translateY(-100%);
         line-height: 1.4;
     }
-    &:hover {
+    a:hover {
         cursor: pointer;
     }
+    &:hover {
+         cursor: pointer;
+     }
     &:hover .img-description {
         @media screen and (min-width: $tablet-breakpoint){
             transform: translateY(0);
@@ -52,6 +55,8 @@
     }
     &.btn-container {
         display: flex;
+        width: 200px;
+        margin: 3em auto 0;
         justify-content: center;
         align-items: center;
         transform: translateY(-50%);
@@ -101,3 +106,6 @@ li.column{
     }
 }
 
+.teaser ~ .column-home:hover {
+    cursor: default;
+}

@@ -9,9 +9,9 @@
                 ?>
                 <p>
                     <?php
-                        echo $datum['duration-start'];
-                        echo $datum['bindestrich'];
-                        echo $datum['duration-end'];
+                    echo $datum['duration-start'];
+                    echo $datum['bindestrich'];
+                    echo $datum['duration_end'];
                     ?>
                 </p>
             <?php 

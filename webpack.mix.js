@@ -13,6 +13,7 @@ const js_tasks = [
     {name: 'js-script', file: './themes/src/assets/js/scripts.js', dest: js_out_dir, uglify: true},
     {name: 'js-splide', file: './themes/src/assets/js/splideConfig.js', dest: js_out_dir, uglify: true},
     {name: 'js-lightbox', file: './themes/src/assets/js/lightbox.js', dest: js_out_dir, uglify: true},
+    {name: 'js-slider', file: './themes/src/assets/js/slider.js', dest: js_out_dir, uglify: true},
 ];
 
 for (const task of css_tasks) {
