@@ -1503,6 +1503,7 @@ ul .list {
 .btn-container-about-me {
   gap: 10px;
   max-width: 400px;
+  max-height: 500px;
 }
 @media screen and (min-width: 800px) {
   .btn-container-about-me {
@@ -1521,7 +1522,6 @@ ul .list {
 @media screen and (min-width: 1200px) {
   .about-me {
     position: relative;
-    z-index: -1;
     max-height: 600px;
   }
   .about-me .columns {

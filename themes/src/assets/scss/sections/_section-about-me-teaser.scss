@@ -33,6 +33,7 @@
 .btn-container-about-me {
     gap: 10px;
     max-width: 400px;
+    max-height: 500px;
     @media screen and (min-width: $tablet-breakpoint) {
         margin-top: 3em;
     }
@@ -49,7 +50,6 @@
 .about-me {
     @media screen and (min-width: $desktop-breakpoint) {
         position: relative;
-        z-index: -1;
         max-height: 600px;
         .columns {
             padding: 100px 20% 0;
