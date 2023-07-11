@@ -117,6 +117,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+
+
+
+
+
+
+
 // Event Listener "DOMContentLoaded" wird nur ausgeführt, wenn der DOM fertig aufgebaut ist
 document.addEventListener('DOMContentLoaded', function () {
     jsLoaded()

@@ -266,7 +266,6 @@ section#splide-sculptures {
        object-fit: cover;
     -o-object-position: 50% 50%;
        object-position: 50% 50%;
-    min-height: 400px;
   }
 }
 .column.btn-container,

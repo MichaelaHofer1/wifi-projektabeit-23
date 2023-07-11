@@ -46,7 +46,6 @@ if(function_exists('acf_register_block_type')){
         'render_template' => 'template-parts/blocks/block-header.php',                
         'enqueue_assets' => function(){
             wp_enqueue_style('splideCss', get_template_directory_uri() . '/assets/css/slider.css');
-            wp_enqueue_script('splideConfig', get_template_directory_uri() . '/assets/js/splideConfig.js');
         }
      ));
 }
